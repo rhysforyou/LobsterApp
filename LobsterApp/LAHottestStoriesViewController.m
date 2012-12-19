@@ -8,7 +8,6 @@
 
 #import "LAHottestStoriesViewController.h"
 
-#import "LADetailViewController.h"
 #import "LAHTTPClient.h"
 #import "Story.h"
 
@@ -109,15 +108,6 @@
 {
     // The table view should not be re-orderable.
     return NO;
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setDetailItem:object];
-    }
 }
 
 #pragma mark - Fetched results controller

@@ -34,7 +34,6 @@
 		57ED63B81681469A0039C47E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED63B71681469A0039C47E /* MobileCoreServices.framework */; };
 		57ED63BA168146A00039C47E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED63B9168146A00039C47E /* SystemConfiguration.framework */; };
 		57ED63C4168147890039C47E /* LAHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED63C3168147890039C47E /* LAHTTPClient.m */; };
-		57ED63C916814AAA0039C47E /* LADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED63C616814AAA0039C47E /* LADetailViewController.m */; };
 		57ED63CA16814AAA0039C47E /* LAHottestStoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED63C816814AAA0039C47E /* LAHottestStoriesViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -84,8 +83,6 @@
 		57ED63B9168146A00039C47E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		57ED63C2168147890039C47E /* LAHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAHTTPClient.h; sourceTree = "<group>"; };
 		57ED63C3168147890039C47E /* LAHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAHTTPClient.m; sourceTree = "<group>"; };
-		57ED63C516814AAA0039C47E /* LADetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADetailViewController.h; sourceTree = "<group>"; };
-		57ED63C616814AAA0039C47E /* LADetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LADetailViewController.m; sourceTree = "<group>"; };
 		57ED63C716814AAA0039C47E /* LAHottestStoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAHottestStoriesViewController.h; sourceTree = "<group>"; };
 		57ED63C816814AAA0039C47E /* LAHottestStoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAHottestStoriesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,8 +213,6 @@
 		57ED63BB168146D20039C47E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				57ED63C516814AAA0039C47E /* LADetailViewController.h */,
-				57ED63C616814AAA0039C47E /* LADetailViewController.m */,
 				57ED63C716814AAA0039C47E /* LAHottestStoriesViewController.h */,
 				57ED63C816814AAA0039C47E /* LAHottestStoriesViewController.m */,
 			);
@@ -342,7 +337,6 @@
 				57ED6397168146500039C47E /* AFXMLRequestOperation.m in Sources */,
 				57ED6398168146500039C47E /* UIImageView+AFNetworking.m in Sources */,
 				57ED63C4168147890039C47E /* LAHTTPClient.m in Sources */,
-				57ED63C916814AAA0039C47E /* LADetailViewController.m in Sources */,
 				57ED63CA16814AAA0039C47E /* LAHottestStoriesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
