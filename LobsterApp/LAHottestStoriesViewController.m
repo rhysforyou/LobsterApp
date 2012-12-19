@@ -6,17 +6,17 @@
 //  Copyright (c) 2012 Rhys Powell. All rights reserved.
 //
 
-#import "LAMasterViewController.h"
+#import "LAHottestStoriesViewController.h"
 
 #import "LADetailViewController.h"
 #import "LAHTTPClient.h"
 #import "Story.h"
 
-@interface LAMasterViewController ()
+@interface LAHottestStoriesViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
-@implementation LAMasterViewController
+@implementation LAHottestStoriesViewController
 
 - (void)viewDidLoad
 {

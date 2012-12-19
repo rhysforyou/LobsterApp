@@ -8,7 +8,7 @@
 
 #import "LAAppDelegate.h"
 
-#import "LAMasterViewController.h"
+#import "LAHottestStoriesViewController.h"
 
 @implementation LAAppDelegate
 
@@ -20,7 +20,7 @@
 {
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    LAMasterViewController *controller = (LAMasterViewController *)navigationController.topViewController;
+    LAHottestStoriesViewController *controller = (LAHottestStoriesViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     
     return YES;

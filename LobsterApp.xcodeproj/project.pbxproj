@@ -35,7 +35,7 @@
 		57ED63BA168146A00039C47E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED63B9168146A00039C47E /* SystemConfiguration.framework */; };
 		57ED63C4168147890039C47E /* LAHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED63C3168147890039C47E /* LAHTTPClient.m */; };
 		57ED63C916814AAA0039C47E /* LADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED63C616814AAA0039C47E /* LADetailViewController.m */; };
-		57ED63CA16814AAA0039C47E /* LAMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED63C816814AAA0039C47E /* LAMasterViewController.m */; };
+		57ED63CA16814AAA0039C47E /* LAHottestStoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED63C816814AAA0039C47E /* LAHottestStoriesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,8 +86,8 @@
 		57ED63C3168147890039C47E /* LAHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAHTTPClient.m; sourceTree = "<group>"; };
 		57ED63C516814AAA0039C47E /* LADetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADetailViewController.h; sourceTree = "<group>"; };
 		57ED63C616814AAA0039C47E /* LADetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LADetailViewController.m; sourceTree = "<group>"; };
-		57ED63C716814AAA0039C47E /* LAMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAMasterViewController.h; sourceTree = "<group>"; };
-		57ED63C816814AAA0039C47E /* LAMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAMasterViewController.m; sourceTree = "<group>"; };
+		57ED63C716814AAA0039C47E /* LAHottestStoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAHottestStoriesViewController.h; sourceTree = "<group>"; };
+		57ED63C816814AAA0039C47E /* LAHottestStoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAHottestStoriesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,8 +218,8 @@
 			children = (
 				57ED63C516814AAA0039C47E /* LADetailViewController.h */,
 				57ED63C616814AAA0039C47E /* LADetailViewController.m */,
-				57ED63C716814AAA0039C47E /* LAMasterViewController.h */,
-				57ED63C816814AAA0039C47E /* LAMasterViewController.m */,
+				57ED63C716814AAA0039C47E /* LAHottestStoriesViewController.h */,
+				57ED63C816814AAA0039C47E /* LAHottestStoriesViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 				57ED6398168146500039C47E /* UIImageView+AFNetworking.m in Sources */,
 				57ED63C4168147890039C47E /* LAHTTPClient.m in Sources */,
 				57ED63C916814AAA0039C47E /* LADetailViewController.m in Sources */,
-				57ED63CA16814AAA0039C47E /* LAMasterViewController.m in Sources */,
+				57ED63CA16814AAA0039C47E /* LAHottestStoriesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
