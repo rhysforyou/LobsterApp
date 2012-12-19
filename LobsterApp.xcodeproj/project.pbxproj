@@ -35,6 +35,7 @@
 		57ED6398168146500039C47E /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED635A168146500039C47E /* UIImageView+AFNetworking.m */; };
 		57ED63B81681469A0039C47E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED63B71681469A0039C47E /* MobileCoreServices.framework */; };
 		57ED63BA168146A00039C47E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED63B9168146A00039C47E /* SystemConfiguration.framework */; };
+		57ED63C4168147890039C47E /* LAHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED63C3168147890039C47E /* LAHTTPClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,8 @@
 		57ED635A168146500039C47E /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		57ED63B71681469A0039C47E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		57ED63B9168146A00039C47E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		57ED63C2168147890039C47E /* LAHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAHTTPClient.h; sourceTree = "<group>"; };
+		57ED63C3168147890039C47E /* LAHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAHTTPClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,7 @@
 		57ED630916807EDD0039C47E /* LobsterApp */ = {
 			isa = PBXGroup;
 			children = (
+				57ED63C11681474F0039C47E /* API */,
 				57ED63BE168147010039C47E /* App Delegate */,
 				57ED63BB168146D20039C47E /* View Controllers */,
 				57ED63C01681471D0039C47E /* Views */,
@@ -246,6 +250,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		57ED63C11681474F0039C47E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				57ED63C2168147890039C47E /* LAHTTPClient.h */,
+				57ED63C3168147890039C47E /* LAHTTPClient.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,6 +343,7 @@
 				57ED6396168146500039C47E /* AFURLConnectionOperation.m in Sources */,
 				57ED6397168146500039C47E /* AFXMLRequestOperation.m in Sources */,
 				57ED6398168146500039C47E /* UIImageView+AFNetworking.m in Sources */,
+				57ED63C4168147890039C47E /* LAHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
