@@ -9,6 +9,7 @@
 #import "LAAppDelegate.h"
 
 #import "LAHottestStoriesViewController.h"
+#import "LAThemeManager.h"
 
 @implementation LAAppDelegate
 
@@ -18,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [LAThemeManager customizeAppearance];\
+    
     // Override point for customization after application launch.
     UITabBarController *tabbBarController = (UITabBarController *)self.window.rootViewController;
     UINavigationController *navigationController = (UINavigationController *)tabbBarController.viewControllers[0];

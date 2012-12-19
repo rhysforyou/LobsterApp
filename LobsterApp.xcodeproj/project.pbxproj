@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57E7BE9616819D4200C190AE /* LAThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E7BE9316819D4200C190AE /* LAThemeManager.m */; };
+		57E7BE9716819D4200C190AE /* LADefaultTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E7BE9516819D4200C190AE /* LADefaultTheme.m */; };
 		57ED630216807EDD0039C47E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED630116807EDD0039C47E /* UIKit.framework */; };
 		57ED630416807EDD0039C47E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED630316807EDD0039C47E /* Foundation.framework */; };
 		57ED630616807EDD0039C47E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED630516807EDD0039C47E /* CoreGraphics.framework */; };
@@ -38,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57E7BE9216819D4200C190AE /* LAThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAThemeManager.h; sourceTree = "<group>"; };
+		57E7BE9316819D4200C190AE /* LAThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAThemeManager.m; sourceTree = "<group>"; };
+		57E7BE9416819D4200C190AE /* LADefaultTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADefaultTheme.h; sourceTree = "<group>"; };
+		57E7BE9516819D4200C190AE /* LADefaultTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LADefaultTheme.m; sourceTree = "<group>"; };
 		57ED62FD16807EDD0039C47E /* LobsterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LobsterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57ED630116807EDD0039C47E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57ED630316807EDD0039C47E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,6 +110,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57E7BE9016819D2F00C190AE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				57E7BE9216819D4200C190AE /* LAThemeManager.h */,
+				57E7BE9316819D4200C190AE /* LAThemeManager.m */,
+				57E7BE9416819D4200C190AE /* LADefaultTheme.h */,
+				57E7BE9516819D4200C190AE /* LADefaultTheme.m */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
 		57ED62F216807EDD0039C47E = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +155,7 @@
 		57ED630916807EDD0039C47E /* LobsterApp */ = {
 			isa = PBXGroup;
 			children = (
+				57E7BE9016819D2F00C190AE /* Theme */,
 				57ED63BE168147010039C47E /* App Delegate */,
 				57ED63C11681474F0039C47E /* API */,
 				57ED63BB168146D20039C47E /* View Controllers */,
@@ -338,6 +356,8 @@
 				57ED6398168146500039C47E /* UIImageView+AFNetworking.m in Sources */,
 				57ED63C4168147890039C47E /* LAHTTPClient.m in Sources */,
 				57ED63CA16814AAA0039C47E /* LAHottestStoriesViewController.m in Sources */,
+				57E7BE9616819D4200C190AE /* LAThemeManager.m in Sources */,
+				57E7BE9716819D4200C190AE /* LADefaultTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +473,7 @@
 				57ED632B16807EDE0039C47E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
