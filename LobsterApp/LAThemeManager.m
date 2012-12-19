@@ -7,7 +7,7 @@
 //
 
 #import "LAThemeManager.h"
-#import "LADefaultTheme.h"
+#import "LAReddishTheme.h"
 
 @implementation LAThemeManager
 
@@ -17,7 +17,7 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        theme = [[LADefaultTheme alloc] init];
+        theme = [[LAReddishTheme alloc] init];
     });
     
     return theme;
@@ -27,28 +27,14 @@
 {
     id <LATheme> theme = [self sharedTheme];
     
-    NSMutableDictionary *titleTextAttributes = [[NSMutableDictionary alloc] init];
-    
-    if ([theme textColor]) {
-        titleTextAttributes[UITextAttributeTextColor] = [theme textColor];
-    }
-    
-    if ([theme shadowColor]) {
-        titleTextAttributes[UITextAttributeTextShadowColor] = [theme shadowColor];
-    }
-    
-    if (!CGSizeEqualToSize([theme shadowOffset], CGSizeZero)) {
-        titleTextAttributes[UITextAttributeTextShadowOffset] = [NSValue valueWithCGSize:[theme shadowOffset]];
-    }
-    
     UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
     [navigationBarAppearance setTintColor:[theme baseTintColor]];
-    [navigationBarAppearance setTitleTextAttributes:titleTextAttributes];
     [navigationBarAppearance setBackgroundImage:[theme navigationBackgroundForBarMetrics:UIBarMetricsDefault] forBarMetrics:UIBarMetricsDefault];
     [navigationBarAppearance setBackgroundImage:[theme navigationBackgroundForBarMetrics:UIBarMetricsLandscapePhone] forBarMetrics:UIBarMetricsLandscapePhone];
+    [navigationBarAppearance setShadowImage:[theme topShadowImage]];
+    [navigationBarAppearance setTitleTextAttributes:[theme navigationBarTitleAttributes]];
     
     UIBarButtonItem *barButtonItemAppearance = [UIBarButtonItem appearance];
-    [barButtonItemAppearance setTitleTextAttributes:titleTextAttributes forState:UIControlStateNormal];
     
     [barButtonItemAppearance setBackgroundImage:[theme barButtonBackgroundForState:UIControlStateNormal style:UIBarButtonItemStyleBordered barMetrics:UIBarMetricsDefault] forState:UIControlStateNormal style:UIBarButtonItemStyleBordered barMetrics:UIBarMetricsDefault];
     [barButtonItemAppearance setBackgroundImage:[theme barButtonBackgroundForState:UIControlStateHighlighted style:UIBarButtonItemStyleBordered barMetrics:UIBarMetricsDefault] forState:UIControlStateHighlighted style:UIBarButtonItemStyleBordered barMetrics:UIBarMetricsDefault];

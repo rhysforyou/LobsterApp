@@ -67,4 +67,19 @@
     return nil;
 }
 
+- (UIImage *)topShadowImage
+{
+    return nil;
+}
+
+- (UIImage *)bottomShadowImage
+{
+    return nil;
+}
+
+- (NSDictionary *)navigationBarTitleAttributes
+{
+    return nil;
+}
+
 @end

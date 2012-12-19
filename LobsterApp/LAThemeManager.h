@@ -25,6 +25,11 @@
 - (UIImage *)barButtonBackgroundForState:(UIControlState)state style:(UIBarButtonItemStyle)style barMetrics:(UIBarMetrics)barMetrics;
 - (UIImage *)backBarButtonBackgroundForState:(UIControlState)state style:(UIBarButtonItemStyle)style barMetrics:(UIBarMetrics)barMetrics;
 
+- (UIImage *)topShadowImage;
+- (UIImage *)bottomShadowImage;
+
+- (NSDictionary *)navigationBarTitleAttributes;
+
 @end
 
 

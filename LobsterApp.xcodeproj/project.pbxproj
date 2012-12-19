@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		578048D81681BAE400BA6767 /* LAReddishTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 578048D71681BAE400BA6767 /* LAReddishTheme.m */; };
+		578048E11681BE3C00BA6767 /* navigationBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 578048DB1681BE3C00BA6767 /* navigationBackground.png */; };
+		578048E21681BE3C00BA6767 /* navigationBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 578048DC1681BE3C00BA6767 /* navigationBackground@2x.png */; };
+		578048E31681BE3C00BA6767 /* navigationBackgroundLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 578048DD1681BE3C00BA6767 /* navigationBackgroundLandscape.png */; };
+		578048E41681BE3C00BA6767 /* navigationBackgroundLandscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 578048DE1681BE3C00BA6767 /* navigationBackgroundLandscape@2x.png */; };
+		578048E51681BE3C00BA6767 /* topShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 578048DF1681BE3C00BA6767 /* topShadow.png */; };
+		578048E61681BE3C00BA6767 /* topShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 578048E01681BE3C00BA6767 /* topShadow@2x.png */; };
 		57E7BE9616819D4200C190AE /* LAThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E7BE9316819D4200C190AE /* LAThemeManager.m */; };
 		57E7BE9716819D4200C190AE /* LADefaultTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E7BE9516819D4200C190AE /* LADefaultTheme.m */; };
 		57ED630216807EDD0039C47E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED630116807EDD0039C47E /* UIKit.framework */; };
@@ -40,6 +47,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		578048D61681BAE400BA6767 /* LAReddishTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAReddishTheme.h; sourceTree = "<group>"; };
+		578048D71681BAE400BA6767 /* LAReddishTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAReddishTheme.m; sourceTree = "<group>"; };
+		578048DB1681BE3C00BA6767 /* navigationBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigationBackground.png; path = Assets/navigationBackground.png; sourceTree = "<group>"; };
+		578048DC1681BE3C00BA6767 /* navigationBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBackground@2x.png"; path = "Assets/navigationBackground@2x.png"; sourceTree = "<group>"; };
+		578048DD1681BE3C00BA6767 /* navigationBackgroundLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigationBackgroundLandscape.png; path = Assets/navigationBackgroundLandscape.png; sourceTree = "<group>"; };
+		578048DE1681BE3C00BA6767 /* navigationBackgroundLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBackgroundLandscape@2x.png"; path = "Assets/navigationBackgroundLandscape@2x.png"; sourceTree = "<group>"; };
+		578048DF1681BE3C00BA6767 /* topShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topShadow.png; path = Assets/topShadow.png; sourceTree = "<group>"; };
+		578048E01681BE3C00BA6767 /* topShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topShadow@2x.png"; path = "Assets/topShadow@2x.png"; sourceTree = "<group>"; };
 		57E7BE9216819D4200C190AE /* LAThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAThemeManager.h; sourceTree = "<group>"; };
 		57E7BE9316819D4200C190AE /* LAThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAThemeManager.m; sourceTree = "<group>"; };
 		57E7BE9416819D4200C190AE /* LADefaultTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADefaultTheme.h; sourceTree = "<group>"; };
@@ -110,13 +125,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		578048DA1681BE0700BA6767 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				578048DB1681BE3C00BA6767 /* navigationBackground.png */,
+				578048DC1681BE3C00BA6767 /* navigationBackground@2x.png */,
+				578048DD1681BE3C00BA6767 /* navigationBackgroundLandscape.png */,
+				578048DE1681BE3C00BA6767 /* navigationBackgroundLandscape@2x.png */,
+				578048DF1681BE3C00BA6767 /* topShadow.png */,
+				578048E01681BE3C00BA6767 /* topShadow@2x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		57E7BE9016819D2F00C190AE /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				578048DA1681BE0700BA6767 /* Assets */,
 				57E7BE9216819D4200C190AE /* LAThemeManager.h */,
 				57E7BE9316819D4200C190AE /* LAThemeManager.m */,
 				57E7BE9416819D4200C190AE /* LADefaultTheme.h */,
 				57E7BE9516819D4200C190AE /* LADefaultTheme.m */,
+				578048D61681BAE400BA6767 /* LAReddishTheme.h */,
+				578048D71681BAE400BA6767 /* LAReddishTheme.m */,
 			);
 			name = Theme;
 			sourceTree = "<group>";
@@ -329,6 +360,12 @@
 				57ED631816807EDD0039C47E /* Default@2x.png in Resources */,
 				57ED631A16807EDD0039C47E /* Default-568h@2x.png in Resources */,
 				57ED631D16807EDE0039C47E /* MainStoryboard.storyboard in Resources */,
+				578048E11681BE3C00BA6767 /* navigationBackground.png in Resources */,
+				578048E21681BE3C00BA6767 /* navigationBackground@2x.png in Resources */,
+				578048E31681BE3C00BA6767 /* navigationBackgroundLandscape.png in Resources */,
+				578048E41681BE3C00BA6767 /* navigationBackgroundLandscape@2x.png in Resources */,
+				578048E51681BE3C00BA6767 /* topShadow.png in Resources */,
+				578048E61681BE3C00BA6767 /* topShadow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +395,7 @@
 				57ED63CA16814AAA0039C47E /* LAHottestStoriesViewController.m in Sources */,
 				57E7BE9616819D4200C190AE /* LAThemeManager.m in Sources */,
 				57E7BE9716819D4200C190AE /* LADefaultTheme.m in Sources */,
+				578048D81681BAE400BA6767 /* LAReddishTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
