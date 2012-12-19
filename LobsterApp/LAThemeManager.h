@@ -30,6 +30,11 @@
 
 - (NSDictionary *)navigationBarTitleAttributes;
 
+- (UIImage *)tabBarBackground;
+- (UIImage *)tabBarSelectionIndicator;
+
+- (NSDictionary *)tabBarItemTextAttributesForState:(UIControlState)state;
+
 @end
 
 

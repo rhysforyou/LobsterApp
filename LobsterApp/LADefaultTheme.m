@@ -82,4 +82,19 @@
     return nil;
 }
 
+- (UIImage *)tabBarBackground
+{
+    return nil;
+}
+
+- (UIImage *)tabBarSelectionIndicato
+{
+    return nil;
+}
+
+- (NSDictionary *)tabBarItemTextAttributesForState:(UIControlState)state
+{
+    return nil;
+}
+
 @end

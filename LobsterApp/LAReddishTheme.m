@@ -48,4 +48,31 @@
     return attributes;
 }
 
+- (UIImage *)tabBarBackground
+{
+    return [UIImage imageNamed:@"tabBarBackground"];
+}
+
+- (UIImage *)tabBarSelectionIndicator
+{
+    UIImage *image = [UIImage imageNamed:@"tabBarSelectionIndicator"];
+    image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 5.0, 0.0, 5.0)];
+    
+    return image;
+}
+
+- (NSDictionary *)tabBarItemTextAttributesForState:(UIControlState)state
+{
+    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+    attributes[UITextAttributeFont] = [UIFont fontWithName:@"Helvetica-Light" size:11.0];
+    
+    if (state == UIControlStateSelected) {
+        attributes[UITextAttributeTextColor] = [UIColor whiteColor];
+    } else {
+        attributes[UITextAttributeTextColor] = [UIColor colorWithWhite:1.0 alpha:0.5];
+    }
+    
+    return attributes;
+}
+
 @end
