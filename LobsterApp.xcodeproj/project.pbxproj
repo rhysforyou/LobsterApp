@@ -138,17 +138,11 @@
 		57ED630916807EDD0039C47E /* LobsterApp */ = {
 			isa = PBXGroup;
 			children = (
+				57ED63BE168147010039C47E /* App Delegate */,
+				57ED63BB168146D20039C47E /* View Controllers */,
+				57ED63C01681471D0039C47E /* Views */,
+				57ED63BF168147100039C47E /* Models */,
 				57ED633A168085D20039C47E /* Core Data */,
-				57ED631216807EDD0039C47E /* LAAppDelegate.h */,
-				57ED631316807EDD0039C47E /* LAAppDelegate.m */,
-				57ED631B16807EDE0039C47E /* MainStoryboard.storyboard */,
-				57ED632116807EDE0039C47E /* LAMasterViewController.h */,
-				57ED632216807EDE0039C47E /* LAMasterViewController.m */,
-				57ED632416807EDE0039C47E /* LADetailViewController.h */,
-				57ED632516807EDE0039C47E /* LADetailViewController.m */,
-				57ED631E16807EDE0039C47E /* LobsterApp.xcdatamodeld */,
-				57ED634116813DCD0039C47E /* Story.h */,
-				57ED634216813DCD0039C47E /* Story.m */,
 				57ED630A16807EDD0039C47E /* Supporting Files */,
 			);
 			path = LobsterApp;
@@ -171,6 +165,7 @@
 		57ED633A168085D20039C47E /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				57ED631E16807EDE0039C47E /* LobsterApp.xcdatamodeld */,
 				57ED633B168085F60039C47E /* RPManagedObject.h */,
 				57ED633C168085F60039C47E /* RPManagedObject.m */,
 				57ED633E16812DDF0039C47E /* RPRemoteManagedObject.h */,
@@ -212,6 +207,43 @@
 			);
 			name = AFNetworking;
 			path = AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
+		57ED63BB168146D20039C47E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57ED632116807EDE0039C47E /* LAMasterViewController.h */,
+				57ED632216807EDE0039C47E /* LAMasterViewController.m */,
+				57ED632416807EDE0039C47E /* LADetailViewController.h */,
+				57ED632516807EDE0039C47E /* LADetailViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		57ED63BE168147010039C47E /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				57ED631216807EDD0039C47E /* LAAppDelegate.h */,
+				57ED631316807EDD0039C47E /* LAAppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		57ED63BF168147100039C47E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57ED634116813DCD0039C47E /* Story.h */,
+				57ED634216813DCD0039C47E /* Story.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		57ED63C01681471D0039C47E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57ED631B16807EDE0039C47E /* MainStoryboard.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
