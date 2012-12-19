@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Hottest Stories";
+    self.navigationItem.title = NSLocalizedString(@"Hottest", nil);
 }
 
 - (void)viewDidAppear:(BOOL)animated
