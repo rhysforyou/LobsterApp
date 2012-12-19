@@ -35,4 +35,17 @@
     return self;
 }
 
+- (void)getHottestStoriesWithSuccess:(LAHTTPClientSuccess)success failure:(LAHTTPClientFailure)failure
+{
+    [self getPath:@"" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success((AFJSONRequestOperation *)operation, responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure((AFJSONRequestOperation *) operation, error);
+        }
+    }];
+}
+
 @end

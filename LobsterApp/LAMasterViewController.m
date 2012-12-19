@@ -9,6 +9,8 @@
 #import "LAMasterViewController.h"
 
 #import "LADetailViewController.h"
+#import "LAHTTPClient.h"
+#import "Story.h"
 
 @interface LAMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -16,19 +18,16 @@
 
 @implementation LAMasterViewController
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    self.navigationItem.title = @"Hottest Stories";
+}
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,22 +38,29 @@
 
 - (void)insertNewObject:(id)sender
 {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-         // Replace this implementation with code to handle the error appropriately.
-         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
+    // Probably get rid of this
+}
+
+- (void)reloadData
+{
+    [[LAHTTPClient sharedClinet] getHottestStoriesWithSuccess:^(AFJSONRequestOperation *operation, id responseObject) {
+        for (Story *story in self.fetchedResultsController.fetchedObjects) {
+            story.rank = @0;
+        }
+        
+        NSArray *hottestStories = (NSArray *)responseObject;
+        
+        NSNumber *rank = @1;
+        
+        for (NSDictionary *storyDict in hottestStories) {
+            Story *story = [Story objectWithDictionary:storyDict context:self.managedObjectContext];
+            story.rank = rank;
+            rank = [NSNumber numberWithInt:([rank integerValue] + 1)];
+        }
+        
+        [self.managedObjectContext save:nil];
+        [self.fetchedResultsController performFetch:nil];
+    } failure:nil];
 }
 
 #pragma mark - Table View
@@ -124,15 +130,18 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:[Story entityName] inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
+    [fetchRequest setFetchBatchSize:25];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
-    NSArray *sortDescriptors = @[sortDescriptor];
+    NSSortDescriptor *rankSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"rank" ascending:YES];
+    NSArray *sortDescriptors = @[rankSortDescriptor];
+    
+    NSPredicate *hottestPredicate = [NSPredicate predicateWithFormat:@"rank != 0"];
+    [fetchRequest setPredicate:hottestPredicate];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
     
@@ -215,8 +224,9 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    Story *story = (Story *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = story.title;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ points • %@ comments", story.score, story.commentCount];
 }
 
 @end

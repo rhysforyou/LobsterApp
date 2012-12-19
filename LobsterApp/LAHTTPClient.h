@@ -8,8 +8,13 @@
 
 #import "AFNetworking.h"
 
+typedef void (^LAHTTPClientSuccess)(AFJSONRequestOperation *operation, id responseObject);
+typedef void (^LAHTTPClientFailure)(AFJSONRequestOperation *operation, NSError *error);
+
 @interface LAHTTPClient : AFHTTPClient
 
 + (instancetype)sharedClinet;
+
+- (void)getHottestStoriesWithSuccess:(LAHTTPClientSuccess)success failure:(LAHTTPClientFailure)failure;
 
 @end

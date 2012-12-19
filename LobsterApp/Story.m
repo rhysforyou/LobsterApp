@@ -17,6 +17,7 @@
 @dynamic shortID;
 @dynamic title;
 @dynamic url;
+@dynamic rank;
 @dynamic submitter;
 
 + (NSString *)entityName
