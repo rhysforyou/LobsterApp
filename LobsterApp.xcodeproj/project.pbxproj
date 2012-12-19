@@ -21,6 +21,9 @@
 		57ED632016807EDE0039C47E /* LobsterApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57ED631E16807EDE0039C47E /* LobsterApp.xcdatamodeld */; };
 		57ED632316807EDE0039C47E /* LAMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED632216807EDE0039C47E /* LAMasterViewController.m */; };
 		57ED632616807EDE0039C47E /* LADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED632516807EDE0039C47E /* LADetailViewController.m */; };
+		57ED633D168085F60039C47E /* RPManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED633C168085F60039C47E /* RPManagedObject.m */; };
+		57ED634016812DE00039C47E /* RPRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED633F16812DDF0039C47E /* RPRemoteManagedObject.m */; };
+		57ED634316813DCE0039C47E /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED634216813DCD0039C47E /* Story.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,12 @@
 		57ED632216807EDE0039C47E /* LAMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAMasterViewController.m; sourceTree = "<group>"; };
 		57ED632416807EDE0039C47E /* LADetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LADetailViewController.h; sourceTree = "<group>"; };
 		57ED632516807EDE0039C47E /* LADetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LADetailViewController.m; sourceTree = "<group>"; };
+		57ED633B168085F60039C47E /* RPManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPManagedObject.h; sourceTree = "<group>"; };
+		57ED633C168085F60039C47E /* RPManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPManagedObject.m; sourceTree = "<group>"; };
+		57ED633E16812DDF0039C47E /* RPRemoteManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRemoteManagedObject.h; sourceTree = "<group>"; };
+		57ED633F16812DDF0039C47E /* RPRemoteManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRemoteManagedObject.m; sourceTree = "<group>"; };
+		57ED634116813DCD0039C47E /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
+		57ED634216813DCD0039C47E /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +101,7 @@
 		57ED630916807EDD0039C47E /* LobsterApp */ = {
 			isa = PBXGroup;
 			children = (
+				57ED633A168085D20039C47E /* Core Data */,
 				57ED631216807EDD0039C47E /* LAAppDelegate.h */,
 				57ED631316807EDD0039C47E /* LAAppDelegate.m */,
 				57ED631B16807EDE0039C47E /* MainStoryboard.storyboard */,
@@ -100,6 +110,8 @@
 				57ED632416807EDE0039C47E /* LADetailViewController.h */,
 				57ED632516807EDE0039C47E /* LADetailViewController.m */,
 				57ED631E16807EDE0039C47E /* LobsterApp.xcdatamodeld */,
+				57ED634116813DCD0039C47E /* Story.h */,
+				57ED634216813DCD0039C47E /* Story.m */,
 				57ED630A16807EDD0039C47E /* Supporting Files */,
 			);
 			path = LobsterApp;
@@ -117,6 +129,17 @@
 				57ED631916807EDD0039C47E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		57ED633A168085D20039C47E /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				57ED633B168085F60039C47E /* RPManagedObject.h */,
+				57ED633C168085F60039C47E /* RPManagedObject.m */,
+				57ED633E16812DDF0039C47E /* RPRemoteManagedObject.h */,
+				57ED633F16812DDF0039C47E /* RPRemoteManagedObject.m */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +214,9 @@
 				57ED632016807EDE0039C47E /* LobsterApp.xcdatamodeld in Sources */,
 				57ED632316807EDE0039C47E /* LAMasterViewController.m in Sources */,
 				57ED632616807EDE0039C47E /* LADetailViewController.m in Sources */,
+				57ED633D168085F60039C47E /* RPManagedObject.m in Sources */,
+				57ED634016812DE00039C47E /* RPRemoteManagedObject.m in Sources */,
+				57ED634316813DCE0039C47E /* Story.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

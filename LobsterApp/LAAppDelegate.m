@@ -9,6 +9,7 @@
 #import "LAAppDelegate.h"
 
 #import "LAMasterViewController.h"
+#import "Story.h"
 
 @implementation LAAppDelegate
 
@@ -22,6 +23,9 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     LAMasterViewController *controller = (LAMasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    [self.managedObjectContext save:nil];
+    
     return YES;
 }
 							
