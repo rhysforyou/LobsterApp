@@ -29,6 +29,7 @@
 - (UIImage *)bottomShadowImage;
 
 - (NSDictionary *)navigationBarTitleAttributes;
+- (NSDictionary *)barButtonTitleAttributesForState:(UIControlState)state;
 
 - (UIImage *)tabBarBackground;
 - (UIImage *)tabBarSelectionIndicator;

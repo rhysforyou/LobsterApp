@@ -34,6 +34,25 @@
     return image;
 }
 
+- (UIImage *)backBarButtonBackgroundForState:(UIControlState)state style:(UIBarButtonItemStyle)style barMetrics:(UIBarMetrics)barMetrics
+{
+    NSString *imageName = @"backButtonBackground";
+    
+    if (state == UIControlStateNormal) {
+        imageName = [imageName stringByAppendingString:@"Normal"];
+    } else if (state == UIControlStateHighlighted) {
+        imageName = [imageName stringByAppendingString:@"Highlighted"];
+    } else if (state == UIControlStateHighlighted) {
+        imageName = [imageName stringByAppendingString:@"Disabled"];
+    }
+    
+    UIImage *image = [UIImage imageNamed:imageName];
+    image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(5.0, 14.0, 0.0, 5.0)];
+    image = [image imageWithAlignmentRectInsets:UIEdgeInsetsMake(0.0, 0.0, 1.0, 0.0)];
+    
+    return image;
+}
+
 - (UIImage *)topShadowImage
 {
     return [UIImage imageNamed:@"topShadow"];
@@ -44,6 +63,15 @@
     NSDictionary *attributes = @{
         UITextAttributeFont : [UIFont fontWithName:@"Helvetica-Light" size:20.0]
     };
+    
+    return attributes;
+}
+
+- (NSDictionary *)barButtonTitleAttributesForState:(UIControlState)state
+{
+    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+    
+    attributes[UITextAttributeFont] = [UIFont fontWithName:@"Helvetica-Light" size:12.0];
     
     return attributes;
 }

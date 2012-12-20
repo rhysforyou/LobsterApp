@@ -82,6 +82,11 @@
     return nil;
 }
 
+- (NSDictionary *)barButtonTitleAttributesForState:(UIControlState)state
+{
+    return nil;
+}
+
 - (UIImage *)tabBarBackground
 {
     return nil;

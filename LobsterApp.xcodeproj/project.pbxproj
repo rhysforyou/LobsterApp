@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5770DE461682CBE700039169 /* backButtonBackgroundDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 5770DE401682CBE700039169 /* backButtonBackgroundDisabled.png */; };
+		5770DE471682CBE700039169 /* backButtonBackgroundDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5770DE411682CBE700039169 /* backButtonBackgroundDisabled@2x.png */; };
+		5770DE481682CBE700039169 /* backButtonBackgroundHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 5770DE421682CBE700039169 /* backButtonBackgroundHighlighted.png */; };
+		5770DE491682CBE700039169 /* backButtonBackgroundHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5770DE431682CBE700039169 /* backButtonBackgroundHighlighted@2x.png */; };
+		5770DE4A1682CBE700039169 /* backButtonBackgroundNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5770DE441682CBE700039169 /* backButtonBackgroundNormal.png */; };
+		5770DE4B1682CBE700039169 /* backButtonBackgroundNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5770DE451682CBE700039169 /* backButtonBackgroundNormal@2x.png */; };
 		578048D81681BAE400BA6767 /* LAReddishTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 578048D71681BAE400BA6767 /* LAReddishTheme.m */; };
 		578048E11681BE3C00BA6767 /* navigationBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 578048DB1681BE3C00BA6767 /* navigationBackground.png */; };
 		578048E21681BE3C00BA6767 /* navigationBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 578048DC1681BE3C00BA6767 /* navigationBackground@2x.png */; };
@@ -51,6 +57,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5770DE401682CBE700039169 /* backButtonBackgroundDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButtonBackgroundDisabled.png; path = Assets/backButtonBackgroundDisabled.png; sourceTree = "<group>"; };
+		5770DE411682CBE700039169 /* backButtonBackgroundDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backButtonBackgroundDisabled@2x.png"; path = "Assets/backButtonBackgroundDisabled@2x.png"; sourceTree = "<group>"; };
+		5770DE421682CBE700039169 /* backButtonBackgroundHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButtonBackgroundHighlighted.png; path = Assets/backButtonBackgroundHighlighted.png; sourceTree = "<group>"; };
+		5770DE431682CBE700039169 /* backButtonBackgroundHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backButtonBackgroundHighlighted@2x.png"; path = "Assets/backButtonBackgroundHighlighted@2x.png"; sourceTree = "<group>"; };
+		5770DE441682CBE700039169 /* backButtonBackgroundNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButtonBackgroundNormal.png; path = Assets/backButtonBackgroundNormal.png; sourceTree = "<group>"; };
+		5770DE451682CBE700039169 /* backButtonBackgroundNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backButtonBackgroundNormal@2x.png"; path = "Assets/backButtonBackgroundNormal@2x.png"; sourceTree = "<group>"; };
 		578048D61681BAE400BA6767 /* LAReddishTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAReddishTheme.h; sourceTree = "<group>"; };
 		578048D71681BAE400BA6767 /* LAReddishTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAReddishTheme.m; sourceTree = "<group>"; };
 		578048DB1681BE3C00BA6767 /* navigationBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigationBackground.png; path = Assets/navigationBackground.png; sourceTree = "<group>"; };
@@ -146,6 +158,12 @@
 				578048E81681C2FB00BA6767 /* tabBarBackground@2x.png */,
 				578048E91681C2FB00BA6767 /* tabBarSelectionIndicator.png */,
 				578048EA1681C2FB00BA6767 /* tabBarSelectionIndicator@2x.png */,
+				5770DE401682CBE700039169 /* backButtonBackgroundDisabled.png */,
+				5770DE411682CBE700039169 /* backButtonBackgroundDisabled@2x.png */,
+				5770DE421682CBE700039169 /* backButtonBackgroundHighlighted.png */,
+				5770DE431682CBE700039169 /* backButtonBackgroundHighlighted@2x.png */,
+				5770DE441682CBE700039169 /* backButtonBackgroundNormal.png */,
+				5770DE451682CBE700039169 /* backButtonBackgroundNormal@2x.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -382,6 +400,12 @@
 				578048EC1681C2FB00BA6767 /* tabBarBackground@2x.png in Resources */,
 				578048ED1681C2FB00BA6767 /* tabBarSelectionIndicator.png in Resources */,
 				578048EE1681C2FB00BA6767 /* tabBarSelectionIndicator@2x.png in Resources */,
+				5770DE461682CBE700039169 /* backButtonBackgroundDisabled.png in Resources */,
+				5770DE471682CBE700039169 /* backButtonBackgroundDisabled@2x.png in Resources */,
+				5770DE481682CBE700039169 /* backButtonBackgroundHighlighted.png in Resources */,
+				5770DE491682CBE700039169 /* backButtonBackgroundHighlighted@2x.png in Resources */,
+				5770DE4A1682CBE700039169 /* backButtonBackgroundNormal.png in Resources */,
+				5770DE4B1682CBE700039169 /* backButtonBackgroundNormal@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

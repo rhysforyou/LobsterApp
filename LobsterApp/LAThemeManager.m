@@ -52,6 +52,10 @@
     [barButtonItemAppearance setBackButtonBackgroundImage:[theme backBarButtonBackgroundForState:UIControlStateHighlighted style:UIBarButtonItemStyleBordered barMetrics:UIBarMetricsLandscapePhone] forState:UIControlStateHighlighted barMetrics:UIBarMetricsLandscapePhone];
     [barButtonItemAppearance setBackButtonBackgroundImage:[theme backBarButtonBackgroundForState:UIControlStateDisabled style:UIBarButtonItemStyleBordered barMetrics:UIBarMetricsLandscapePhone] forState:UIControlStateDisabled barMetrics:UIBarMetricsLandscapePhone];
     
+    [barButtonItemAppearance setTitleTextAttributes:[theme barButtonTitleAttributesForState:UIControlStateNormal] forState:UIControlStateNormal];
+    [barButtonItemAppearance setTitleTextAttributes:[theme barButtonTitleAttributesForState:UIControlStateSelected] forState:UIControlStateSelected];
+    [barButtonItemAppearance setTitleTextAttributes:[theme barButtonTitleAttributesForState:UIControlStateDisabled] forState:UIControlStateDisabled];
+    
     UITabBar *tabBarAppearance = [UITabBar appearance];
     
     [tabBarAppearance setBackgroundImage:[theme tabBarBackground]];
