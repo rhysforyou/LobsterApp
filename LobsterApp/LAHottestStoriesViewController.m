@@ -22,6 +22,9 @@
     [super viewDidLoad];
     
     self.navigationItem.title = NSLocalizedString(@"Hottest", nil);
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -42,6 +45,7 @@
 
 - (void)reloadData
 {
+    [self.refreshControl beginRefreshing];
     [[LAHTTPClient sharedClinet] getHottestStoriesWithSuccess:^(AFJSONRequestOperation *operation, id responseObject) {
         for (Story *story in self.fetchedResultsController.fetchedObjects) {
             story.rank = @0;
@@ -59,6 +63,7 @@
         
         [self.managedObjectContext save:nil];
         [self.fetchedResultsController performFetch:nil];
+        [self.refreshControl endRefreshing];
     } failure:nil];
 }
 
