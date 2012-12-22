@@ -10,6 +10,7 @@
 
 #import "LAHTTPClient.h"
 #import "Story.h"
+#import "LAStoryPageViewController.h"
 
 @interface LAHottestStoriesViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -57,6 +58,16 @@
         NSLog(@"Error loading hottest storeis: %@", error.localizedDescription);
         [self.refreshControl endRefreshing];
     }];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[LAStoryPageViewController class]]) {
+        NSIndexPath *selectedRow = [self.tableView indexPathForSelectedRow];
+        Story *story = (Story *)[self.fetchedResultsController objectAtIndexPath:selectedRow];
+        LAStoryPageViewController *pageVC = segue.destinationViewController;
+        pageVC.story = story;
+    }
 }
 
 #pragma mark - Table View

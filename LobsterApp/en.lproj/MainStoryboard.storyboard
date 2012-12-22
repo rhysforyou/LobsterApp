@@ -122,16 +122,30 @@
             </objects>
             <point key="canvasLocation" x="1129" y="964"/>
         </scene>
-        <!--View Controller - Story-->
+        <!--Story Page View Controller - Story-->
         <scene sceneID="R4o-bX-t1F">
             <objects>
-                <viewController id="RLa-Wq-cG9" sceneMemberID="viewController">
+                <viewController id="RLa-Wq-cG9" customClass="LAStoryPageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jsf-5f-t2g">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ka-7M-Hvq">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Ka-7M-Hvq" firstAttribute="bottom" secondItem="Jsf-5f-t2g" secondAttribute="bottom" type="default" id="33q-cI-Z1k"/>
+                            <constraint firstItem="8Ka-7M-Hvq" firstAttribute="top" secondItem="Jsf-5f-t2g" secondAttribute="top" type="default" id="ESu-fN-k1f"/>
+                            <constraint firstItem="8Ka-7M-Hvq" firstAttribute="trailing" secondItem="Jsf-5f-t2g" secondAttribute="trailing" type="default" id="amm-U2-dV6"/>
+                            <constraint firstItem="8Ka-7M-Hvq" firstAttribute="leading" secondItem="Jsf-5f-t2g" secondAttribute="leading" type="default" id="bjL-Yf-k1Z"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Story" id="gSU-bx-uEy"/>
+                    <connections>
+                        <outlet property="webView" destination="8Ka-7M-Hvq" id="IZg-t6-IaI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYt-RY-z6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,14 +190,6 @@
             <point key="canvasLocation" x="603" y="964"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="LAHottestStoriesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAHottestStoriesViewController.h"/>
-        </class>
-        <class className="LANewsetStoriesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LANewsetStoriesViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
