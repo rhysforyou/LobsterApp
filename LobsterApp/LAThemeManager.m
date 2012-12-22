@@ -77,5 +77,10 @@
     }
 }
 
++ (void)customizeTabBarItem:(UITabBarItem *)item type:(LATabBarItem)type
+{
+    [item setFinishedSelectedImage:[[self sharedTheme] tabBarItemImageForType:type state:UIControlStateSelected]
+       withFinishedUnselectedImage:[[self sharedTheme] tabBarItemImageForType:type state:UIControlStateNormal]];
+}
 
 @end

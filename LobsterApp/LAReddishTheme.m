@@ -89,6 +89,25 @@
     return image;
 }
 
+- (UIImage *)tabBarItemImageForType:(LATabBarItem)type state:(UIControlState)state
+{
+    NSString *imageName;
+    
+    if (type == LATabBarItemHottest) {
+        imageName = @"flameIcon";
+    } else if (type == LATabBarItemNewest) {
+        imageName = @"clockIcon";
+    }
+    
+    if (state == UIControlStateNormal) {
+        imageName = [imageName stringByAppendingString:@"Deselected"];
+    } else if (state == UIControlStateSelected) {
+        imageName = [imageName stringByAppendingString:@"Selected"];
+    }
+    
+    return [UIImage imageNamed:imageName];
+}
+
 - (NSDictionary *)tabBarItemTextAttributesForState:(UIControlState)state
 {
     NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];

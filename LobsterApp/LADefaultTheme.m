@@ -102,4 +102,9 @@
     return nil;
 }
 
+- (UIImage *)tabBarItemImageForType:(LATabBarItem)type state:(UIControlState)state
+{
+    
+}
+
 @end

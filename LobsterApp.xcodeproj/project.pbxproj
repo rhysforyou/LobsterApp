@@ -27,6 +27,14 @@
 		579A483816857BBA0025396F /* LANewsetStoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A483716857BBA0025396F /* LANewsetStoriesViewController.m */; };
 		579A4841168582C00025396F /* NSDate+LAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A4840168582C00025396F /* NSDate+LAAdditions.m */; };
 		579A484A16858AD10025396F /* LAStoryPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A484916858AD10025396F /* LAStoryPageViewController.m */; };
+		57B848E7168592A0009BDA54 /* clockIconDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B848DF168592A0009BDA54 /* clockIconDeselected.png */; };
+		57B848E8168592A0009BDA54 /* clockIconDeselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B848E0168592A0009BDA54 /* clockIconDeselected@2x.png */; };
+		57B848E9168592A0009BDA54 /* clockIconSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B848E1168592A0009BDA54 /* clockIconSelected.png */; };
+		57B848EA168592A0009BDA54 /* clockIconSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B848E2168592A0009BDA54 /* clockIconSelected@2x.png */; };
+		57B848EB168592A0009BDA54 /* flameIconDeselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B848E3168592A0009BDA54 /* flameIconDeselected.png */; };
+		57B848EC168592A0009BDA54 /* flameIconDeselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B848E4168592A0009BDA54 /* flameIconDeselected@2x.png */; };
+		57B848ED168592A0009BDA54 /* flameIconSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B848E5168592A0009BDA54 /* flameIconSelected.png */; };
+		57B848EE168592A0009BDA54 /* flameIconSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B848E6168592A0009BDA54 /* flameIconSelected@2x.png */; };
 		57E7BE9616819D4200C190AE /* LAThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E7BE9316819D4200C190AE /* LAThemeManager.m */; };
 		57E7BE9716819D4200C190AE /* LADefaultTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E7BE9516819D4200C190AE /* LADefaultTheme.m */; };
 		57ED630216807EDD0039C47E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED630116807EDD0039C47E /* UIKit.framework */; };
@@ -84,6 +92,14 @@
 		579A4840168582C00025396F /* NSDate+LAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LAAdditions.m"; sourceTree = "<group>"; };
 		579A484816858AD10025396F /* LAStoryPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAStoryPageViewController.h; sourceTree = "<group>"; };
 		579A484916858AD10025396F /* LAStoryPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAStoryPageViewController.m; sourceTree = "<group>"; };
+		57B848DF168592A0009BDA54 /* clockIconDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockIconDeselected.png; sourceTree = "<group>"; };
+		57B848E0168592A0009BDA54 /* clockIconDeselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clockIconDeselected@2x.png"; sourceTree = "<group>"; };
+		57B848E1168592A0009BDA54 /* clockIconSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockIconSelected.png; sourceTree = "<group>"; };
+		57B848E2168592A0009BDA54 /* clockIconSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clockIconSelected@2x.png"; sourceTree = "<group>"; };
+		57B848E3168592A0009BDA54 /* flameIconDeselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flameIconDeselected.png; sourceTree = "<group>"; };
+		57B848E4168592A0009BDA54 /* flameIconDeselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flameIconDeselected@2x.png"; sourceTree = "<group>"; };
+		57B848E5168592A0009BDA54 /* flameIconSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flameIconSelected.png; sourceTree = "<group>"; };
+		57B848E6168592A0009BDA54 /* flameIconSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flameIconSelected@2x.png"; sourceTree = "<group>"; };
 		57E7BE9216819D4200C190AE /* LAThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAThemeManager.h; sourceTree = "<group>"; };
 		57E7BE9316819D4200C190AE /* LAThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAThemeManager.m; sourceTree = "<group>"; };
 		57E7BE9416819D4200C190AE /* LADefaultTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADefaultTheme.h; sourceTree = "<group>"; };
@@ -157,6 +173,14 @@
 		578048DA1681BE0700BA6767 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				57B848DF168592A0009BDA54 /* clockIconDeselected.png */,
+				57B848E0168592A0009BDA54 /* clockIconDeselected@2x.png */,
+				57B848E1168592A0009BDA54 /* clockIconSelected.png */,
+				57B848E2168592A0009BDA54 /* clockIconSelected@2x.png */,
+				57B848E3168592A0009BDA54 /* flameIconDeselected.png */,
+				57B848E4168592A0009BDA54 /* flameIconDeselected@2x.png */,
+				57B848E5168592A0009BDA54 /* flameIconSelected.png */,
+				57B848E6168592A0009BDA54 /* flameIconSelected@2x.png */,
 				578048DB1681BE3C00BA6767 /* navigationBackground.png */,
 				578048DC1681BE3C00BA6767 /* navigationBackground@2x.png */,
 				578048DD1681BE3C00BA6767 /* navigationBackgroundLandscape.png */,
@@ -429,6 +453,14 @@
 				5770DE491682CBE700039169 /* backButtonBackgroundHighlighted@2x.png in Resources */,
 				5770DE4A1682CBE700039169 /* backButtonBackgroundNormal.png in Resources */,
 				5770DE4B1682CBE700039169 /* backButtonBackgroundNormal@2x.png in Resources */,
+				57B848E7168592A0009BDA54 /* clockIconDeselected.png in Resources */,
+				57B848E8168592A0009BDA54 /* clockIconDeselected@2x.png in Resources */,
+				57B848E9168592A0009BDA54 /* clockIconSelected.png in Resources */,
+				57B848EA168592A0009BDA54 /* clockIconSelected@2x.png in Resources */,
+				57B848EB168592A0009BDA54 /* flameIconDeselected.png in Resources */,
+				57B848EC168592A0009BDA54 /* flameIconDeselected@2x.png in Resources */,
+				57B848ED168592A0009BDA54 /* flameIconSelected.png in Resources */,
+				57B848EE168592A0009BDA54 /* flameIconSelected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

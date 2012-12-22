@@ -27,6 +27,9 @@
     LAHottestStoriesViewController *controller = (LAHottestStoriesViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     
+    [LAThemeManager customizeTabBarItem:tabbBarController.tabBar.items[0] type:LATabBarItemHottest];
+    [LAThemeManager customizeTabBarItem:tabbBarController.tabBar.items[1] type:LATabBarItemNewest];
+    
     return YES;
 }
 							

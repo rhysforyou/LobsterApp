@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    LATabBarItemHottest,
+    LATabBarItemNewest
+} LATabBarItem;
+
 @protocol LATheme <NSObject>
 
 - (UIColor *)mainColor;
@@ -34,6 +39,7 @@
 - (UIImage *)tabBarBackground;
 - (UIImage *)tabBarSelectionIndicator;
 
+- (UIImage *)tabBarItemImageForType:(LATabBarItem)type state:(UIControlState)state;
 - (NSDictionary *)tabBarItemTextAttributesForState:(UIControlState)state;
 
 @end
@@ -46,5 +52,6 @@
 + (void)customizeAppearance;
 
 + (void)customizeView:(UIView *)view;
++ (void)customizeTabBarItem:(UITabBarItem *)item type:(LATabBarItem)type;
 
 @end
