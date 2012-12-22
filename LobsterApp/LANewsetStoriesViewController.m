@@ -51,8 +51,7 @@
     [[LAHTTPClient sharedClinet] getNewestStoriesWithSuccess:^(AFJSONRequestOperation *operation, id responseObject) {
         NSArray *newestStories = (NSArray *)responseObject;
         for (NSDictionary *storyDict in newestStories) {
-            Story *story = [Story objectWithDictionary:storyDict context:self.managedObjectContext];
-            NSLog(@"New story: %@", story);
+            [Story objectWithDictionary:storyDict context:self.managedObjectContext];
         }
         
         [self.managedObjectContext save:nil];
