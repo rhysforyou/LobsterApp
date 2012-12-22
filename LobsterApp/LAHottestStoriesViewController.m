@@ -67,6 +67,7 @@
         Story *story = (Story *)[self.fetchedResultsController objectAtIndexPath:selectedRow];
         LAStoryPageViewController *pageVC = segue.destinationViewController;
         pageVC.story = story;
+        pageVC.hidesBottomBarWhenPushed = YES;
     }
 }
 

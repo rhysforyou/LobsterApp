@@ -9,6 +9,7 @@
 #import "LANewsetStoriesViewController.h"
 #import "Story.h"
 #import "LAHTTPClient.h"
+#import "LAStoryPageViewController.h"
 
 @interface LANewsetStoriesViewController ()
 
@@ -50,6 +51,17 @@
         NSLog(@"Error loading newest stories: %@", error.localizedDescription);
         [self.refreshControl endRefreshing];
     }];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[LAStoryPageViewController class]]) {
+        NSIndexPath *selectedRow = [self.tableView indexPathForSelectedRow];
+        Story *story = (Story *)[self.fetchedResultsController objectAtIndexPath:selectedRow];
+        LAStoryPageViewController *pageVC = segue.destinationViewController;
+        pageVC.story = story;
+        pageVC.hidesBottomBarWhenPushed = YES;
+    }
 }
 
 #pragma mark - Table View
