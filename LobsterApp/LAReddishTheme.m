@@ -58,6 +58,11 @@
     return [UIImage imageNamed:@"topShadow"];
 }
 
+- (UIImage *)bottomShadowImage
+{
+    return [UIImage imageNamed:@"bottomShadow"];
+}
+
 - (NSDictionary *)navigationBarTitleAttributes
 {
     NSDictionary *attributes = @{

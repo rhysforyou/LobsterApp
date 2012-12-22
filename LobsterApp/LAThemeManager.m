@@ -60,6 +60,7 @@
     
     [tabBarAppearance setBackgroundImage:[theme tabBarBackground]];
     [tabBarAppearance setSelectionIndicatorImage:[theme tabBarSelectionIndicator]];
+    [tabBarAppearance setShadowImage:[theme bottomShadowImage]];
     
     UITabBarItem *tabBarItemAppearance = [UITabBarItem appearance];
     

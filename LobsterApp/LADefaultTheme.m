@@ -92,7 +92,7 @@
     return nil;
 }
 
-- (UIImage *)tabBarSelectionIndicato
+- (UIImage *)tabBarSelectionIndicator
 {
     return nil;
 }
@@ -104,7 +104,7 @@
 
 - (UIImage *)tabBarItemImageForType:(LATabBarItem)type state:(UIControlState)state
 {
-    
+    return nil;
 }
 
 @end
