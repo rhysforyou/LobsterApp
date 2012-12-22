@@ -16,5 +16,6 @@ typedef void (^LAHTTPClientFailure)(AFJSONRequestOperation *operation, NSError *
 + (instancetype)sharedClinet;
 
 - (void)getHottestStoriesWithSuccess:(LAHTTPClientSuccess)success failure:(LAHTTPClientFailure)failure;
+- (void)getNewestStoriesWithSuccess:(LAHTTPClientSuccess)success failure:(LAHTTPClientFailure)failure;
 
 @end

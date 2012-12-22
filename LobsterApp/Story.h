@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * url;
 @property (nonatomic, strong) NSNumber * rank;
+@property (nonatomic, strong) NSDate   * creationDate;
 @property (nonatomic, retain) NSManagedObject *submitter;
 
 @end

@@ -1,30 +1,31 @@
 //
-//  LAMasterViewController.m
+//  LANewsetStoriesViewController.m
 //  LobsterApp
 //
-//  Created by Rhys Powell on 18/12/12.
+//  Created by Rhys Powell on 22/12/12.
 //  Copyright (c) 2012 Rhys Powell. All rights reserved.
 //
 
-#import "LAHottestStoriesViewController.h"
-
-#import "LAHTTPClient.h"
+#import "LANewsetStoriesViewController.h"
 #import "Story.h"
+#import "LAHTTPClient.h"
 
-@interface LAHottestStoriesViewController ()
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+@interface LANewsetStoriesViewController ()
+
 @end
 
-@implementation LAHottestStoriesViewController
+@implementation LANewsetStoriesViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = NSLocalizedString(@"Hottest", nil);
+    self.navigationItem.title = NSLocalizedString(@"Newest", nil);
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
+    
+    self.managedObjectContext = [Story mainContext];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -46,26 +47,19 @@
 - (void)reloadData
 {
     [self.refreshControl beginRefreshing];
-    [[LAHTTPClient sharedClinet] getHottestStoriesWithSuccess:^(AFJSONRequestOperation *operation, id responseObject) {
-        for (Story *story in self.fetchedResultsController.fetchedObjects) {
-            story.rank = @0;
-        }
-        
-        NSArray *hottestStories = (NSArray *)responseObject;
-        
-        NSNumber *rank = @1;
-        
-        for (NSDictionary *storyDict in hottestStories) {
+    
+    [[LAHTTPClient sharedClinet] getNewestStoriesWithSuccess:^(AFJSONRequestOperation *operation, id responseObject) {
+        NSArray *newestStories = (NSArray *)responseObject;
+        for (NSDictionary *storyDict in newestStories) {
             Story *story = [Story objectWithDictionary:storyDict context:self.managedObjectContext];
-            story.rank = rank;
-            rank = [NSNumber numberWithInt:([rank integerValue] + 1)];
+            NSLog(@"New story: %@", story);
         }
         
         [self.managedObjectContext save:nil];
         [self.fetchedResultsController performFetch:nil];
         [self.refreshControl endRefreshing];
     } failure:^(AFJSONRequestOperation *operation, NSError *error) {
-        NSLog(@"Error loading hottest storeis: %@", error.localizedDescription);
+        NSLog(@"Error loading newest stories: %@", error.localizedDescription);
         [self.refreshControl endRefreshing];
     }];
 }
@@ -104,12 +98,12 @@
         
         NSError *error = nil;
         if (![context save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
-    }   
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
@@ -135,11 +129,8 @@
     [fetchRequest setFetchBatchSize:25];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *rankSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"rank" ascending:YES];
+    NSSortDescriptor *rankSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO];
     NSArray *sortDescriptors = @[rankSortDescriptor];
-    
-    NSPredicate *hottestPredicate = [NSPredicate predicateWithFormat:@"rank != 0"];
-    [fetchRequest setPredicate:hottestPredicate];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
     
@@ -151,14 +142,14 @@
     
 	NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {
-	     // Replace this implementation with code to handle the error appropriately.
-	     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	    abort();
 	}
     
     return _fetchedResultsController;
-}    
+}
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
@@ -216,5 +207,6 @@
     cell.textLabel.text = story.title;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ points • %@ comments", story.score, story.commentCount];
 }
+
 
 @end

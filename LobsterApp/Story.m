@@ -7,7 +7,7 @@
 //
 
 #import "Story.h"
-
+#import "NSDate+LAAdditions.h"
 
 @implementation Story
 
@@ -18,6 +18,7 @@
 @dynamic title;
 @dynamic url;
 @dynamic rank;
+@dynamic creationDate;
 @dynamic submitter;
 
 + (NSString *)entityName
@@ -51,6 +52,7 @@
     self.shortID = dictionary[@"short_id"];
     self.title = dictionary[@"title"];
     self.url = dictionary[@"url"];
+    self.creationDate = [NSDate parseDate:dictionary[@"created_at"]];
 }
 
 @end
