@@ -20,7 +20,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="48"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="No fighting in the war room" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9F-A9-NQW">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="No fighting in the war room" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="q9F-A9-NQW">
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,32 +104,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="elo-rn-d9F" detailTextLabel="uBf-Ef-UZl" style="IBUITableViewCellStyleSubtitle" id="28I-dE-rj4">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="storyCell" rowHeight="49" id="m1N-Ai-VOV" customClass="LAStoryCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="48"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="elo-rn-d9F">
-                                            <rect key="frame" x="10" y="2" width="38" height="22"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="No fighting in the war room" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="0Jm-Rm-v5f">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uBf-Ef-UZl">
-                                            <rect key="frame" x="10" y="24" width="47" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="by username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zt1-Yd-ZWL">
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" type="user" id="NdE-LC-Do4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10 comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-bf-Oqu">
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" type="user" id="wK0-3s-lKN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="zt1-Yd-ZWL" firstAttribute="top" secondItem="0Jm-Rm-v5f" secondAttribute="bottom" priority="800" type="user" id="3jB-Bz-nvW"/>
+                                    <constraint firstItem="CLh-bf-Oqu" firstAttribute="top" secondItem="zt1-Yd-ZWL" secondAttribute="top" type="default" id="6xH-aq-hWi"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Jm-Rm-v5f" secondAttribute="trailing" constant="40" type="user" id="8ee-7D-qyZ"/>
+                                    <constraint firstItem="CLh-bf-Oqu" firstAttribute="leading" secondItem="zt1-Yd-ZWL" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="UEA-RV-gEV"/>
+                                    <constraint firstAttribute="bottom" secondItem="zt1-Yd-ZWL" secondAttribute="bottom" constant="5" type="user" id="UOl-nW-jwY"/>
+                                    <constraint firstItem="0Jm-Rm-v5f" firstAttribute="leading" secondItem="m1N-Ai-VOV" secondAttribute="leading" constant="10" type="user" id="iGN-4h-R4H"/>
+                                    <constraint firstItem="zt1-Yd-ZWL" firstAttribute="leading" secondItem="m1N-Ai-VOV" secondAttribute="leading" constant="10" type="user" id="nfA-HN-CSV"/>
+                                    <constraint firstItem="CLh-bf-Oqu" firstAttribute="baseline" secondItem="zt1-Yd-ZWL" secondAttribute="baseline" type="default" id="okT-bg-44b"/>
+                                    <constraint firstItem="0Jm-Rm-v5f" firstAttribute="top" secondItem="m1N-Ai-VOV" secondAttribute="top" constant="5" type="user" id="z0j-5x-2tZ"/>
+                                </constraints>
                                 <connections>
-                                    <segue destination="RLa-Wq-cG9" kind="push" id="cS2-M3-D5Y"/>
+                                    <outlet property="authorNameLabel" destination="zt1-Yd-ZWL" id="JLE-Ab-NDE"/>
+                                    <outlet property="commentCountLabel" destination="CLh-bf-Oqu" id="m9f-4W-Mli"/>
+                                    <outlet property="storyTitleLabel" destination="0Jm-Rm-v5f" id="hBs-g4-2ND"/>
+                                    <segue destination="RLa-Wq-cG9" kind="push" id="wQg-V7-bof"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -213,37 +234,12 @@
             <point key="canvasLocation" x="603" y="964"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="LAHottestStoriesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAHottestStoriesViewController.h"/>
-        </class>
-        <class className="LANewsetStoriesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LANewsetStoriesViewController.h"/>
-        </class>
-        <class className="LAStoryCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAStoryCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="authorNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="commentCountLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="storyTitleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LAStoryPageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAStoryPageViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="d8N-Zh-uwc"/>
+        <segue reference="wQg-V7-bof"/>
     </inferredMetricsTieBreakers>
 </document>

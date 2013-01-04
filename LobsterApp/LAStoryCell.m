@@ -14,7 +14,17 @@
 
 + (CGFloat)cellHeightWithStory:(Story *)story
 {
-    return 49.0f;
+    static UILabel *dummyTitleLabel;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dummyTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 270.0f, 100.0f)];
+        dummyTitleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:17.0];
+        dummyTitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    });
+    
+    dummyTitleLabel.text = story.title;
+    CGRect textRect = [dummyTitleLabel textRectForBounds:CGRectMake(0.0f, 0.0f, 270.0f, 100.0f) limitedToNumberOfLines:2];
+    return textRect.size.height + 28.0f;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -36,6 +46,7 @@
 - (void)configureWithStory:(Story *)story
 {
     self.storyTitleLabel.text = story.title;
+    NSLog(@"%@", self.storyTitleLabel.constraints);
     self.authorNameLabel.text = [NSString stringWithFormat:@"by %@", story.submitter.username];
     
     if ([story.commentCount isEqual: @1]) {

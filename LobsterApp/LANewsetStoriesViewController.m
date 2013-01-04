@@ -10,6 +10,7 @@
 #import "Story.h"
 #import "LAHTTPClient.h"
 #import "LAStoryPageViewController.h"
+#import "LAStoryCell.h"
 
 @interface LANewsetStoriesViewController ()
 
@@ -79,9 +80,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    LAStoryCell *cell = (LAStoryCell *)[tableView dequeueReusableCellWithIdentifier:@"storyCell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Story *story = (Story *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    return [LAStoryCell cellHeightWithStory:story];
 }
 
 #pragma mark - Fetched results controller
@@ -158,7 +165,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(LAStoryCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
@@ -173,11 +180,10 @@
     [self.tableView endUpdates];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+- (void)configureCell:(LAStoryCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     Story *story = (Story *)[self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = story.title;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ points • %@ comments", story.score, story.commentCount];
+    [cell configureWithStory:story];
 }
 
 
