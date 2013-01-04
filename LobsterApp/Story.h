@@ -11,6 +11,8 @@
 
 #import "RPRemoteManagedObject.h"
 
+@class User;
+
 @interface Story : RPRemoteManagedObject
 
 @property (nonatomic, retain) NSNumber * commentCount;
@@ -21,6 +23,6 @@
 @property (nonatomic, retain) NSString * url;
 @property (nonatomic, strong) NSNumber * rank;
 @property (nonatomic, strong) NSDate   * creationDate;
-@property (nonatomic, retain) NSManagedObject *submitter;
+@property (nonatomic, retain) User     * submitter;
 
 @end

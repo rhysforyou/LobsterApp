@@ -11,6 +11,7 @@
 #import "LAHTTPClient.h"
 #import "Story.h"
 #import "LAStoryPageViewController.h"
+#import "LAStoryCell.h"
 
 @interface LAHottestStoriesViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -86,9 +87,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    LAStoryCell *cell = (LAStoryCell *)[tableView dequeueReusableCellWithIdentifier:@"storyCell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [LAStoryCell cellHeight];
 }
 
 #pragma mark - Fetched results controller
@@ -183,11 +189,10 @@
     [self.tableView endUpdates];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+- (void)configureCell:(LAStoryCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     Story *story = (Story *)[self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = story.title;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ points • %@ comments", story.score, story.commentCount];
+    [cell configureWithStory:story];
 }
 
 @end
