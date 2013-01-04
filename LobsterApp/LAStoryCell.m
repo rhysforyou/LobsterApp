@@ -12,9 +12,9 @@
 
 @implementation LAStoryCell
 
-+ (CGFloat)cellHeight
++ (CGFloat)cellHeightWithStory:(Story *)story
 {
-    return 51.0;
+    return 49.0f;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -36,7 +36,7 @@
 - (void)configureWithStory:(Story *)story
 {
     self.storyTitleLabel.text = story.title;
-    self.authorNameLabel.text = [NSString stringWithFormat:@"Posted by %@", story.submitter.username];
+    self.authorNameLabel.text = [NSString stringWithFormat:@"by %@", story.submitter.username];
     
     if ([story.commentCount isEqual: @1]) {
         self.commentCountLabel.text = @"1 comment";

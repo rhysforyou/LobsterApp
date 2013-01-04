@@ -66,7 +66,7 @@
 - (NSDictionary *)navigationBarTitleAttributes
 {
     NSDictionary *attributes = @{
-        UITextAttributeFont : [UIFont fontWithName:@"Helvetica-Light" size:20.0]
+        UITextAttributeFont : [UIFont fontWithName:@"HelveticaNeue" size:20.0]
     };
     
     return attributes;
@@ -76,7 +76,7 @@
 {
     NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
     
-    attributes[UITextAttributeFont] = [UIFont fontWithName:@"Helvetica-Light" size:12.0];
+    attributes[UITextAttributeFont] = [UIFont fontWithName:@"HelveticaNeue" size:12.0];
     
     return attributes;
 }
@@ -116,7 +116,7 @@
 - (NSDictionary *)tabBarItemTextAttributesForState:(UIControlState)state
 {
     NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
-    attributes[UITextAttributeFont] = [UIFont fontWithName:@"Helvetica-Light" size:11.0];
+    attributes[UITextAttributeFont] = [UIFont fontWithName:@"HelveticaNeue" size:11.0];
     
     if (state == UIControlStateSelected) {
         attributes[UITextAttributeTextColor] = [UIColor whiteColor];

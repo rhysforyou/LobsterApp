@@ -94,7 +94,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [LAStoryCell cellHeight];
+    Story *story = (Story *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    return [LAStoryCell cellHeightWithStory:story];
 }
 
 #pragma mark - Fetched results controller

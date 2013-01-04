@@ -8,33 +8,36 @@
         <scene sceneID="18">
             <objects>
                 <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="LAHottestStoriesViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="118" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="49" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="storyCell" rowHeight="52" id="EAU-NO-FSz" customClass="LAStoryCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="52"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="storyCell" rowHeight="49" id="axk-56-RoP" customClass="LAStoryCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="51"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="48"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Story Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofk-W1-vo2">
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="270" id="xu9-gh-Nb7"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="No fighting in the war room" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9F-A9-NQW">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Posted by rpwll" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJL-87-Ijf">
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="by username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJn-oj-L96">
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" type="user" id="VYT-yq-yfH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="24 comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TQ-Ef-Pca">
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10 comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0U-Mk-Dx3">
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" type="user" id="QQ1-UX-ueB"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
@@ -42,18 +45,21 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="3TQ-Ef-Pca" firstAttribute="leading" secondItem="tJL-87-Ijf" secondAttribute="trailing" constant="10" type="user" id="9eu-gg-fpE"/>
-                                    <constraint firstItem="Ofk-W1-vo2" firstAttribute="leading" secondItem="EAU-NO-FSz" secondAttribute="leading" constant="10" type="user" id="CFy-JB-P1o"/>
-                                    <constraint firstItem="tJL-87-Ijf" firstAttribute="leading" secondItem="EAU-NO-FSz" secondAttribute="leading" constant="10" type="user" id="XAG-6N-Xim"/>
-                                    <constraint firstItem="Ofk-W1-vo2" firstAttribute="top" secondItem="EAU-NO-FSz" secondAttribute="top" constant="5" id="kJX-DH-WF0"/>
-                                    <constraint firstItem="3TQ-Ef-Pca" firstAttribute="baseline" secondItem="tJL-87-Ijf" secondAttribute="baseline" type="default" id="ogj-X5-1db"/>
-                                    <constraint firstAttribute="bottom" secondItem="tJL-87-Ijf" secondAttribute="bottom" constant="7" id="rfg-gY-5wH"/>
+                                    <constraint firstAttribute="bottom" secondItem="yJn-oj-L96" secondAttribute="bottom" constant="5" type="user" id="1dz-RD-gMP"/>
+                                    <constraint firstAttribute="trailing" secondItem="q9F-A9-NQW" secondAttribute="trailing" constant="40" type="user" id="5ba-Ri-g0Q"/>
+                                    <constraint firstItem="yJn-oj-L96" firstAttribute="leading" secondItem="axk-56-RoP" secondAttribute="leading" constant="10" type="user" id="PNb-3r-hr9"/>
+                                    <constraint firstItem="X0U-Mk-Dx3" firstAttribute="leading" secondItem="yJn-oj-L96" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="QTo-gt-cca"/>
+                                    <constraint firstItem="X0U-Mk-Dx3" firstAttribute="top" secondItem="yJn-oj-L96" secondAttribute="top" type="default" id="a5B-Ij-xcy"/>
+                                    <constraint firstItem="q9F-A9-NQW" firstAttribute="top" secondItem="axk-56-RoP" secondAttribute="top" constant="5" type="user" id="gaL-9Y-lQ1"/>
+                                    <constraint firstItem="q9F-A9-NQW" firstAttribute="leading" secondItem="axk-56-RoP" secondAttribute="leading" constant="10" type="user" id="jSU-ds-KJ3"/>
+                                    <constraint firstItem="yJn-oj-L96" firstAttribute="top" secondItem="q9F-A9-NQW" secondAttribute="bottom" priority="800" type="user" id="q9p-Tk-eX8"/>
+                                    <constraint firstItem="X0U-Mk-Dx3" firstAttribute="baseline" secondItem="yJn-oj-L96" secondAttribute="baseline" type="default" id="zLD-1u-DZZ"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="authorNameLabel" destination="tJL-87-Ijf" id="pYl-5y-K6I"/>
-                                    <outlet property="commentCountLabel" destination="3TQ-Ef-Pca" id="Ndf-Po-ZOa"/>
-                                    <outlet property="storyTitleLabel" destination="Ofk-W1-vo2" id="ugA-ny-xcP"/>
-                                    <segue destination="RLa-Wq-cG9" kind="push" id="OCo-Nv-qld"/>
+                                    <outlet property="authorNameLabel" destination="yJn-oj-L96" id="WdG-1U-rqV"/>
+                                    <outlet property="commentCountLabel" destination="X0U-Mk-Dx3" id="hL6-aX-KeX"/>
+                                    <outlet property="storyTitleLabel" destination="q9F-A9-NQW" id="Mzp-Fp-Qtz"/>
+                                    <segue destination="RLa-Wq-cG9" kind="push" id="d8N-Zh-uwc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -238,6 +244,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OCo-Nv-qld"/>
+        <segue reference="d8N-Zh-uwc"/>
     </inferredMetricsTieBreakers>
 </document>
