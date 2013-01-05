@@ -59,7 +59,7 @@
                                     <outlet property="authorNameLabel" destination="yJn-oj-L96" id="WdG-1U-rqV"/>
                                     <outlet property="commentCountLabel" destination="X0U-Mk-Dx3" id="hL6-aX-KeX"/>
                                     <outlet property="storyTitleLabel" destination="q9F-A9-NQW" id="Mzp-Fp-Qtz"/>
-                                    <segue destination="RLa-Wq-cG9" kind="push" id="d8N-Zh-uwc"/>
+                                    <segue destination="nPu-Mb-xMM" kind="push" id="SQo-K0-mpd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -150,7 +150,7 @@
                                     <outlet property="authorNameLabel" destination="zt1-Yd-ZWL" id="JLE-Ab-NDE"/>
                                     <outlet property="commentCountLabel" destination="CLh-bf-Oqu" id="m9f-4W-Mli"/>
                                     <outlet property="storyTitleLabel" destination="0Jm-Rm-v5f" id="hBs-g4-2ND"/>
-                                    <segue destination="RLa-Wq-cG9" kind="push" id="wQg-V7-bof"/>
+                                    <segue destination="nPu-Mb-xMM" kind="push" id="Jfh-Cb-G5J"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -165,7 +165,40 @@
             </objects>
             <point key="canvasLocation" x="1129" y="964"/>
         </scene>
-        <!--Story Page View Controller - Story-->
+        <!--Story Detail View Controller - Story-->
+        <scene sceneID="xjj-bI-Cjf">
+            <objects>
+                <tableViewController id="nPu-Mb-xMM" customClass="LAStoryDetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Eoe-G3-epd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="w87-83-f3T">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nPu-Mb-xMM" id="l2s-bM-WfE"/>
+                            <outlet property="delegate" destination="nPu-Mb-xMM" id="9n3-na-rWa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Story" id="McR-Xr-56n"/>
+                    <connections>
+                        <segue destination="RLa-Wq-cG9" kind="push" identifier="showWebpage" id="hMA-xD-ol0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihr-CK-TuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1677" y="578"/>
+        </scene>
+        <!--Story Page View Controller - Link-->
         <scene sceneID="R4o-bX-t1F">
             <objects>
                 <viewController id="RLa-Wq-cG9" customClass="LAStoryPageViewController" sceneMemberID="viewController">
@@ -186,14 +219,14 @@
                             <constraint firstItem="8Ka-7M-Hvq" firstAttribute="leading" secondItem="Jsf-5f-t2g" secondAttribute="leading" type="default" id="bjL-Yf-k1Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Story" id="gSU-bx-uEy"/>
+                    <navigationItem key="navigationItem" title="Link" id="gSU-bx-uEy"/>
                     <connections>
                         <outlet property="webView" destination="8Ka-7M-Hvq" id="IZg-t6-IaI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYt-RY-z6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="578"/>
+            <point key="canvasLocation" x="2128" y="578"/>
         </scene>
         <!--Navigation Controller - Hottest-->
         <scene sceneID="pEP-KB-cQ7">
@@ -234,12 +267,40 @@
             <point key="canvasLocation" x="603" y="964"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LAHottestStoriesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAHottestStoriesViewController.h"/>
+        </class>
+        <class className="LANewsetStoriesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LANewsetStoriesViewController.h"/>
+        </class>
+        <class className="LAStoryCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAStoryCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="authorNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="commentCountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="storyTitleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LAStoryDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAStoryDetailViewController.h"/>
+        </class>
+        <class className="LAStoryPageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAStoryPageViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wQg-V7-bof"/>
+        <segue reference="Jfh-Cb-G5J"/>
     </inferredMetricsTieBreakers>
 </document>
