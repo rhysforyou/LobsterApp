@@ -17,6 +17,7 @@
 @dynamic moderator;
 @dynamic username;
 @dynamic posts;
+@dynamic comments;
 
 + (NSString *)entityName
 {

@@ -41,11 +41,13 @@
 		579882431697DDBD00214F97 /* LAStoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579882421697DDBD00214F97 /* LAStoryDetailViewController.m */; };
 		579882461697DEF300214F97 /* LASlideUnderHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 579882451697DEF300214F97 /* LASlideUnderHeaderView.m */; };
 		579882481697E63F00214F97 /* testPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 579882471697E63F00214F97 /* testPattern.png */; };
+		579882541698EE2800214F97 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 579882531698EE2800214F97 /* Comment.m */; };
+		579882571698EE3B00214F97 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 579882561698EE3B00214F97 /* User.m */; };
+		5798825A1698EEE900214F97 /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 579882591698EEE900214F97 /* Story.m */; };
 		579A483816857BBA0025396F /* LANewsetStoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A483716857BBA0025396F /* LANewsetStoriesViewController.m */; };
 		579A4841168582C00025396F /* NSDate+LAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A4840168582C00025396F /* NSDate+LAAdditions.m */; };
 		579A484A16858AD10025396F /* LAStoryPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A484916858AD10025396F /* LAStoryPageViewController.m */; };
 		57A6DDAF1696968E00100434 /* LAStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A6DDAE1696968E00100434 /* LAStoryCell.m */; };
-		57A6DDB21696982C00100434 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A6DDB11696982C00100434 /* User.m */; };
 		57E7BE9616819D4200C190AE /* LAThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E7BE9316819D4200C190AE /* LAThemeManager.m */; };
 		57E7BE9716819D4200C190AE /* LADefaultTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E7BE9516819D4200C190AE /* LADefaultTheme.m */; };
 		57ED630216807EDD0039C47E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ED630116807EDD0039C47E /* UIKit.framework */; };
@@ -62,7 +64,6 @@
 		57ED632016807EDE0039C47E /* LobsterApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57ED631E16807EDE0039C47E /* LobsterApp.xcdatamodeld */; };
 		57ED633D168085F60039C47E /* RPManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED633C168085F60039C47E /* RPManagedObject.m */; };
 		57ED634016812DE00039C47E /* RPRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED633F16812DDF0039C47E /* RPRemoteManagedObject.m */; };
-		57ED634316813DCE0039C47E /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED634216813DCD0039C47E /* Story.m */; };
 		57ED6390168146500039C47E /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED6349168146500039C47E /* AFHTTPClient.m */; };
 		57ED6391168146500039C47E /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED634B168146500039C47E /* AFHTTPRequestOperation.m */; };
 		57ED6392168146500039C47E /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 57ED634D168146500039C47E /* AFImageRequestOperation.m */; };
@@ -116,6 +117,12 @@
 		579882441697DEF300214F97 /* LASlideUnderHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LASlideUnderHeaderView.h; sourceTree = "<group>"; };
 		579882451697DEF300214F97 /* LASlideUnderHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LASlideUnderHeaderView.m; sourceTree = "<group>"; };
 		579882471697E63F00214F97 /* testPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testPattern.png; sourceTree = "<group>"; };
+		579882521698EE2800214F97 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		579882531698EE2800214F97 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		579882551698EE3B00214F97 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		579882561698EE3B00214F97 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		579882581698EEE900214F97 /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
+		579882591698EEE900214F97 /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 		579A483616857BBA0025396F /* LANewsetStoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LANewsetStoriesViewController.h; sourceTree = "<group>"; };
 		579A483716857BBA0025396F /* LANewsetStoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LANewsetStoriesViewController.m; sourceTree = "<group>"; };
 		579A483F168582C00025396F /* NSDate+LAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LAAdditions.h"; sourceTree = "<group>"; };
@@ -124,8 +131,6 @@
 		579A484916858AD10025396F /* LAStoryPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAStoryPageViewController.m; sourceTree = "<group>"; };
 		57A6DDAD1696968E00100434 /* LAStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAStoryCell.h; sourceTree = "<group>"; };
 		57A6DDAE1696968E00100434 /* LAStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAStoryCell.m; sourceTree = "<group>"; };
-		57A6DDB01696982C00100434 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		57A6DDB11696982C00100434 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		57E7BE9216819D4200C190AE /* LAThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAThemeManager.h; sourceTree = "<group>"; };
 		57E7BE9316819D4200C190AE /* LAThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAThemeManager.m; sourceTree = "<group>"; };
 		57E7BE9416819D4200C190AE /* LADefaultTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADefaultTheme.h; sourceTree = "<group>"; };
@@ -150,8 +155,6 @@
 		57ED633C168085F60039C47E /* RPManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPManagedObject.m; sourceTree = "<group>"; };
 		57ED633E16812DDF0039C47E /* RPRemoteManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPRemoteManagedObject.h; sourceTree = "<group>"; };
 		57ED633F16812DDF0039C47E /* RPRemoteManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPRemoteManagedObject.m; sourceTree = "<group>"; };
-		57ED634116813DCD0039C47E /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
-		57ED634216813DCD0039C47E /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 		57ED6348168146500039C47E /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		57ED6349168146500039C47E /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		57ED634A168146500039C47E /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -392,10 +395,12 @@
 		57ED63BF168147100039C47E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				57A6DDB01696982C00100434 /* User.h */,
-				57A6DDB11696982C00100434 /* User.m */,
-				57ED634116813DCD0039C47E /* Story.h */,
-				57ED634216813DCD0039C47E /* Story.m */,
+				579882521698EE2800214F97 /* Comment.h */,
+				579882531698EE2800214F97 /* Comment.m */,
+				579882551698EE3B00214F97 /* User.h */,
+				579882561698EE3B00214F97 /* User.m */,
+				579882581698EEE900214F97 /* Story.h */,
+				579882591698EEE900214F97 /* Story.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -524,7 +529,6 @@
 				57ED632016807EDE0039C47E /* LobsterApp.xcdatamodeld in Sources */,
 				57ED633D168085F60039C47E /* RPManagedObject.m in Sources */,
 				57ED634016812DE00039C47E /* RPRemoteManagedObject.m in Sources */,
-				57ED634316813DCE0039C47E /* Story.m in Sources */,
 				57ED6390168146500039C47E /* AFHTTPClient.m in Sources */,
 				57ED6391168146500039C47E /* AFHTTPRequestOperation.m in Sources */,
 				57ED6392168146500039C47E /* AFImageRequestOperation.m in Sources */,
@@ -543,9 +547,11 @@
 				579A4841168582C00025396F /* NSDate+LAAdditions.m in Sources */,
 				579A484A16858AD10025396F /* LAStoryPageViewController.m in Sources */,
 				57A6DDAF1696968E00100434 /* LAStoryCell.m in Sources */,
-				57A6DDB21696982C00100434 /* User.m in Sources */,
 				579882431697DDBD00214F97 /* LAStoryDetailViewController.m in Sources */,
 				579882461697DEF300214F97 /* LASlideUnderHeaderView.m in Sources */,
+				579882541698EE2800214F97 /* Comment.m in Sources */,
+				579882571698EE3B00214F97 /* User.m in Sources */,
+				5798825A1698EEE900214F97 /* Story.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
