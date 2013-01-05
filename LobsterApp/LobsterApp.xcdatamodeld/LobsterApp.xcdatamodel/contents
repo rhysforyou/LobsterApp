@@ -3,8 +3,9 @@
     <entity name="Comment" representedClassName="Comment" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="indentLevel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="shortURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updatedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="commentor" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="comments" inverseEntity="User" syncable="YES"/>
         <relationship name="story" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Story" inverseName="comments" inverseEntity="Story" syncable="YES"/>
@@ -30,8 +31,8 @@
         <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="submitter" inverseEntity="Story" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Comment" positionX="-855" positionY="927" width="128" height="165"/>
         <element name="Story" positionX="-666" positionY="1017" width="128" height="193"/>
         <element name="User" positionX="-1127" positionY="981" width="128" height="133"/>
-        <element name="Comment" positionX="-855" positionY="927" width="128" height="148"/>
     </elements>
 </model>

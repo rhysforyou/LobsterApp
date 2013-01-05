@@ -8,6 +8,7 @@
 
 #import "Story.h"
 #import "User.h"
+#import "Comment.h"
 #import "NSDate+LAAdditions.h"
 
 @implementation Story
@@ -21,6 +22,7 @@
 @dynamic rank;
 @dynamic creationDate;
 @dynamic submitter;
+@dynamic comments;
 
 + (NSString *)entityName
 {
@@ -56,6 +58,11 @@
     self.creationDate = [NSDate parseDate:dictionary[@"created_at"]];
     
     self.submitter = [User objectWithDictionary:dictionary[@"submitter_user"] context:self.managedObjectContext];
+    
+    for (NSDictionary *commentDict in dictionary[@"comments"]) {
+        Comment *comment = [Comment objectWithDictionary:dictionary[@"comment"] context:self.managedObjectContext];
+        [self addCommentsObject:comment];
+    }
 }
 
 - (NSInteger)hoursSinceCreation
