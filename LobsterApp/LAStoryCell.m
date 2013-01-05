@@ -14,17 +14,14 @@
 
 + (CGFloat)cellHeightWithStory:(Story *)story
 {
-    static UILabel *dummyTitleLabel;
+    static UIFont *appFont;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        dummyTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 270.0f, 100.0f)];
-        dummyTitleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:17.0];
-        dummyTitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        appFont = [UIFont fontWithName:@"HelveticaNeue" size:17.0f];
     });
     
-    dummyTitleLabel.text = story.title;
-    CGRect textRect = [dummyTitleLabel textRectForBounds:CGRectMake(0.0f, 0.0f, 270.0f, 100.0f) limitedToNumberOfLines:2];
-    return textRect.size.height + 28.0f;
+    CGSize titleSize = [story.title sizeWithFont:appFont constrainedToSize:CGSizeMake(290.0f, 100.0f) lineBreakMode:NSLineBreakByWordWrapping];
+    return titleSize.height + 28.0f;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
