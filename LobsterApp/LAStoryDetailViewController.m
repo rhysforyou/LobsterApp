@@ -27,12 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    CGRect tableHeaderFrame = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, 400.0);
-    self.tableView.tableHeaderView = [[LASlideUnderHeaderView alloc] initWithFrame:tableHeaderFrame];
-    LASlideUnderHeaderView *headerView = (LASlideUnderHeaderView *)self.tableView.tableHeaderView;
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"testPattern"]];
-    [headerView.backgroundView addSubview:imageView];
 }
 
 - (void)didReceiveMemoryWarning

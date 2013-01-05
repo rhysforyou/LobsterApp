@@ -16,12 +16,13 @@
 
 @implementation LASlideUnderHeaderView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        self.backgroundView = [[UIView alloc] initWithFrame:frame];
-        [self addSubview:_backgroundView];
+        CGRect frame = self.frame;
+        
+        self.backgroundColor = [UIColor clearColor];
         
         UIImage *shadowImage = [UIImage imageNamed:@"bottomShadow"];
         UIImageView *shadowImageView = [[UIImageView alloc] initWithImage:shadowImage];
@@ -43,7 +44,7 @@
         offset.y = 0;
     }
     
-    if (offset.y > self.offscreenHeight) {
+    if (offset.y > self.offscreenHeight || offset.y == 0) {
         CGRect backgroundFrame = self.backgroundView.frame;
         
         offset.y -= self.offscreenHeight;

@@ -173,9 +173,60 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="fuP-PU-TbH" customClass="LASlideUnderHeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3B4-TV-reE">
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="No fighting in the war room" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYQ-Km-iEh">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="by username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wln-1p-Bh0">
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" type="user" id="33R-Ji-b1m"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10 comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpa-bH-VwJ">
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" type="user" id="D8v-Ux-Kbt"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="Fpa-bH-VwJ" firstAttribute="leading" secondItem="Wln-1p-Bh0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4uZ-0h-DtY"/>
+                                        <constraint firstAttribute="trailing" secondItem="KYQ-Km-iEh" secondAttribute="trailing" constant="10" type="user" id="EFo-BI-mZE"/>
+                                        <constraint firstItem="KYQ-Km-iEh" firstAttribute="top" secondItem="3B4-TV-reE" secondAttribute="top" constant="10" id="dTw-fR-ADp"/>
+                                        <constraint firstItem="Wln-1p-Bh0" firstAttribute="baseline" secondItem="Fpa-bH-VwJ" secondAttribute="baseline" type="user" id="hS9-4l-4Wp"/>
+                                        <constraint firstAttribute="bottom" secondItem="Wln-1p-Bh0" secondAttribute="bottom" constant="9" id="hwd-qW-djh"/>
+                                        <constraint firstItem="KYQ-Km-iEh" firstAttribute="leading" secondItem="3B4-TV-reE" secondAttribute="leading" constant="10" type="user" id="jYS-2u-RLO"/>
+                                        <constraint firstItem="Wln-1p-Bh0" firstAttribute="leading" secondItem="KYQ-Km-iEh" secondAttribute="leading" type="default" id="oHb-Vy-DKf"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="3B4-TV-reE" firstAttribute="trailing" secondItem="fuP-PU-TbH" secondAttribute="trailing" type="default" id="QdK-5D-Dy3"/>
+                                <constraint firstItem="3B4-TV-reE" firstAttribute="bottom" secondItem="fuP-PU-TbH" secondAttribute="bottom" type="default" id="Uig-h3-alm"/>
+                                <constraint firstItem="3B4-TV-reE" firstAttribute="top" secondItem="fuP-PU-TbH" secondAttribute="top" type="default" id="b7t-b1-URS"/>
+                                <constraint firstItem="3B4-TV-reE" firstAttribute="leading" secondItem="fuP-PU-TbH" secondAttribute="leading" type="default" id="q1h-rm-ZLO"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="backgroundView" destination="3B4-TV-reE" id="odz-Zt-qC4"/>
+                            </connections>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="w87-83-f3T">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="81" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -274,6 +325,12 @@
         <class className="LANewsetStoriesViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LANewsetStoriesViewController.h"/>
         </class>
+        <class className="LASlideUnderHeaderView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LASlideUnderHeaderView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
+            </relationships>
+        </class>
         <class className="LAStoryCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LAStoryCell.h"/>
             <relationships>
@@ -301,6 +358,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Jfh-Cb-G5J"/>
+        <segue reference="SQo-K0-mpd"/>
     </inferredMetricsTieBreakers>
 </document>

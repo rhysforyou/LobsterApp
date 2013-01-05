@@ -10,7 +10,7 @@
 
 @interface LASlideUnderHeaderView : UIView
 
-@property (nonatomic, strong) UIView *backgroundView;
+@property (nonatomic, strong) IBOutlet UIView *backgroundView;
 
 - (void)handleScrollOffset:(CGPoint)offset;
 
