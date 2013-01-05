@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "RPRemoteManagedObject.h"
 
 @class Story;
 
-@interface User : NSManagedObject
+@interface User : RPRemoteManagedObject
 
 @property (nonatomic, retain) NSNumber * admin;
 @property (nonatomic, retain) NSString * avatarURL;
-@property (nonatomic, retain) NSNumber * id;
 @property (nonatomic, retain) NSNumber * moderator;
 @property (nonatomic, retain) NSString * username;
 @property (nonatomic, retain) NSSet *posts;

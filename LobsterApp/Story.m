@@ -7,6 +7,7 @@
 //
 
 #import "Story.h"
+#import "User.h"
 #import "NSDate+LAAdditions.h"
 
 @implementation Story
@@ -53,6 +54,8 @@
     self.title = dictionary[@"title"];
     self.url = dictionary[@"url"];
     self.creationDate = [NSDate parseDate:dictionary[@"created_at"]];
+    
+    self.submitter = [User objectWithDictionary:dictionary[@"submitter_user"] context:self.managedObjectContext];
 }
 
 @end

@@ -14,13 +14,12 @@
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="admin" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="avatarURL" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="moderator" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="submitter" inverseEntity="Story" syncable="YES"/>
     </entity>
     <elements>
         <element name="Story" positionX="-351" positionY="192" width="128" height="180"/>
-        <element name="User" positionX="-90" positionY="207" width="128" height="135"/>
+        <element name="User" positionX="-90" positionY="207" width="128" height="118"/>
     </elements>
 </model>
