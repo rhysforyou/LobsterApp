@@ -46,7 +46,6 @@
 - (void)configureWithStory:(Story *)story
 {
     self.storyTitleLabel.text = story.title;
-    NSLog(@"%@", self.storyTitleLabel.constraints);
     self.authorNameLabel.text = [NSString stringWithFormat:@"by %@", story.submitter.username];
     
     if ([story.commentCount isEqual: @1]) {
