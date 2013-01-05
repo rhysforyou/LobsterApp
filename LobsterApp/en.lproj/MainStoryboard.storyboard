@@ -192,7 +192,7 @@
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10 comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpa-bH-VwJ">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10 hours ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpa-bH-VwJ">
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" type="user" id="D8v-Ux-Kbt"/>
                                             </constraints>
@@ -242,6 +242,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Story" id="McR-Xr-56n"/>
                     <connections>
+                        <outlet property="postTimeLabel" destination="Fpa-bH-VwJ" id="5Cd-5n-Fkm"/>
+                        <outlet property="storyNameLabel" destination="KYQ-Km-iEh" id="TDp-x2-TF9"/>
+                        <outlet property="submitterNameLabel" destination="Wln-1p-Bh0" id="Lk3-RF-TYa"/>
                         <segue destination="RLa-Wq-cG9" kind="push" identifier="showWebpage" id="hMA-xD-ol0"/>
                     </connections>
                 </tableViewController>
@@ -341,6 +344,11 @@
         </class>
         <class className="LAStoryDetailViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LAStoryDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="postTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="storyNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="submitterNameLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="LAStoryPageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LAStoryPageViewController.h"/>

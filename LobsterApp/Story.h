@@ -25,4 +25,6 @@
 @property (nonatomic, strong) NSDate   * creationDate;
 @property (nonatomic, retain) User     * submitter;
 
+- (NSInteger)hoursSinceCreation;
+
 @end

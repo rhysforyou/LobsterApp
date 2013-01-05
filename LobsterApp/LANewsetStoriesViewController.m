@@ -9,7 +9,7 @@
 #import "LANewsetStoriesViewController.h"
 #import "Story.h"
 #import "LAHTTPClient.h"
-#import "LAStoryPageViewController.h"
+#import "LAStoryDetailViewController.h"
 #import "LAStoryCell.h"
 
 @interface LANewsetStoriesViewController ()
@@ -56,12 +56,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.destinationViewController isKindOfClass:[LAStoryPageViewController class]]) {
+    if ([segue.destinationViewController isKindOfClass:[LAStoryDetailViewController class]]) {
         NSIndexPath *selectedRow = [self.tableView indexPathForSelectedRow];
         Story *story = (Story *)[self.fetchedResultsController objectAtIndexPath:selectedRow];
-        LAStoryPageViewController *pageVC = segue.destinationViewController;
-        pageVC.story = story;
-        pageVC.hidesBottomBarWhenPushed = YES;
+        LAStoryDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.story = story;
+        detailVC.hidesBottomBarWhenPushed = YES;
     }
 }
 

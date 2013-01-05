@@ -58,4 +58,12 @@
     self.submitter = [User objectWithDictionary:dictionary[@"submitter_user"] context:self.managedObjectContext];
 }
 
+- (NSInteger)hoursSinceCreation
+{
+    NSTimeInterval timeSinceCreation = [[NSDate date] timeIntervalSinceDate:self.creationDate];
+    NSInteger hoursSinceCreation = timeSinceCreation / (60 * 60);
+    
+    return hoursSinceCreation;
+}
+
 @end

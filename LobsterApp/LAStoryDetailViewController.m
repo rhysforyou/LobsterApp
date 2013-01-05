@@ -8,6 +8,8 @@
 
 #import "LAStoryDetailViewController.h"
 #import "LASlideUnderHeaderView.h"
+#import "Story.h"
+#import "User.h"
 
 @interface LAStoryDetailViewController ()
 
@@ -24,9 +26,18 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
+    
+    self.storyNameLabel.text = self.story.title;
+    self.submitterNameLabel.text = [NSString stringWithFormat:@"by %@", self.story.submitter.username];
+    
+    if ([self.story hoursSinceCreation] == 1) {
+        self.postTimeLabel.text = @"1 hour ago";
+    } else {
+        self.postTimeLabel.text = [NSString stringWithFormat:@"%d hours ago", [self.story hoursSinceCreation]];
+    }
 }
 
 - (void)didReceiveMemoryWarning

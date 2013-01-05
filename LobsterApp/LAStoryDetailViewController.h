@@ -14,4 +14,8 @@
 
 @property (nonatomic, strong) Story *story;
 
+@property (nonatomic, strong) IBOutlet UILabel *storyNameLabel;
+@property (nonatomic, strong) IBOutlet UILabel *submitterNameLabel;
+@property (nonatomic, strong) IBOutlet UILabel *postTimeLabel;
+
 @end
