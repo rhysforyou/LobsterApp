@@ -8,6 +8,7 @@
 
 #import "LAStoryDetailViewController.h"
 #import "LASlideUnderHeaderView.h"
+#import "LAStoryPageViewController.h"
 #import "Story.h"
 #import "User.h"
 
@@ -44,6 +45,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController class] == [LAStoryPageViewController class]) {
+        [(LAStoryPageViewController *)segue.destinationViewController setStory:self.story];
+    }
 }
 
 #pragma mark - Scroll view delegate

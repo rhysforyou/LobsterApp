@@ -32,7 +32,6 @@
 {
     _story = story;
     
-    NSLog(@"Loading: %@", story.url);
     self.currentURL = [NSURL URLWithString:story.url];
 }
 

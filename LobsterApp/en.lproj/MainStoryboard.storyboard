@@ -214,6 +214,7 @@
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstItem="3B4-TV-reE" firstAttribute="trailing" secondItem="fuP-PU-TbH" secondAttribute="trailing" type="default" id="QdK-5D-Dy3"/>
                                 <constraint firstItem="3B4-TV-reE" firstAttribute="bottom" secondItem="fuP-PU-TbH" secondAttribute="bottom" type="default" id="Uig-h3-alm"/>
@@ -222,6 +223,7 @@
                             </constraints>
                             <connections>
                                 <outlet property="backgroundView" destination="3B4-TV-reE" id="odz-Zt-qC4"/>
+                                <outletCollection property="gestureRecognizers" destination="6LK-at-eCb" appends="YES" id="BKA-rN-M20"/>
                             </connections>
                         </view>
                         <prototypes>
@@ -245,10 +247,14 @@
                         <outlet property="postTimeLabel" destination="Fpa-bH-VwJ" id="5Cd-5n-Fkm"/>
                         <outlet property="storyNameLabel" destination="KYQ-Km-iEh" id="TDp-x2-TF9"/>
                         <outlet property="submitterNameLabel" destination="Wln-1p-Bh0" id="Lk3-RF-TYa"/>
-                        <segue destination="RLa-Wq-cG9" kind="push" identifier="showWebpage" id="hMA-xD-ol0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihr-CK-TuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6LK-at-eCb">
+                    <connections>
+                        <segue destination="RLa-Wq-cG9" kind="push" id="KAK-Rk-wAp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1677" y="578"/>
         </scene>
@@ -257,7 +263,7 @@
             <objects>
                 <viewController id="RLa-Wq-cG9" customClass="LAStoryPageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jsf-5f-t2g">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ka-7M-Hvq">
@@ -274,6 +280,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Link" id="gSU-bx-uEy"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="webView" destination="8Ka-7M-Hvq" id="IZg-t6-IaI"/>
                     </connections>
