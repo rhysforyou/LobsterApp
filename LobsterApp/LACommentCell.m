@@ -17,21 +17,21 @@
     static UIFont *appFont;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        appFont = [UIFont fontWithName:@"HelveticaNeue" size:15.0f];
+        appFont = [UIFont fontWithName:@"HelveticaNeue" size:14.0f];
     });
     
-    CGSize commentTextSize = [comment.content sizeWithFont:appFont constrainedToSize:CGSizeMake(300.0, 10000.0) lineBreakMode:NSLineBreakByWordWrapping];
+    CGFloat commentWidth = 320.0 - [comment.indentLevel integerValue] * 20.0f;
     
-    NSLog(@"Comment text size: %f, %f", commentTextSize.height, commentTextSize.width);
+    CGSize commentTextSize = [comment.content sizeWithFont:appFont constrainedToSize:CGSizeMake(commentWidth, 10000.0) lineBreakMode:NSLineBreakByWordWrapping];
     
-    return commentTextSize.height + 35.0f;
+    return commentTextSize.height + 40.0;
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.commentTextView.contentInset = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0);
+        self.commentTextView.contentInset = UIEdgeInsetsMake(10.0, 13.0, 10.0, 13.0);
     }
     return self;
 }
@@ -45,6 +45,9 @@
 
 - (void)configureWithComment:(Comment *)comment
 {
+    self.commentTextIndentConstraint.constant = 20.0f * ([comment.indentLevel integerValue] - 1);
+    self.titleTextIndentConstraint.constant = 20.0f * ([comment.indentLevel integerValue] - 1) + 10.0f;
+    
     self.commentTextView.text = comment.content;
     self.usernameLabel = [NSString stringWithFormat:@"by %@", comment.commentor.username];
     

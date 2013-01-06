@@ -15,6 +15,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @property (strong, nonatomic) IBOutlet UITextView *commentTextView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *commentTextIndentConstraint;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *titleTextIndentConstraint;
 
 + (CGFloat)heightWithComment:(Comment *)comment;
 
