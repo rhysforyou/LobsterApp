@@ -9,6 +9,7 @@
 #import "LAStoryDetailViewController.h"
 #import "LASlideUnderHeaderView.h"
 #import "LAStoryPageViewController.h"
+#import "LAHTTPClient.h"
 #import "Story.h"
 #import "User.h"
 
@@ -31,14 +32,8 @@
 {
     [super viewWillAppear:animated];
     
-    self.storyNameLabel.text = self.story.title;
-    self.submitterNameLabel.text = [NSString stringWithFormat:@"by %@", self.story.submitter.username];
-    
-    if ([self.story hoursSinceCreation] == 1) {
-        self.postTimeLabel.text = @"1 hour ago";
-    } else {
-        self.postTimeLabel.text = [NSString stringWithFormat:@"%d hours ago", [self.story hoursSinceCreation]];
-    }
+    [self configureView];
+    [self reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,6 +47,31 @@
     if ([segue.destinationViewController class] == [LAStoryPageViewController class]) {
         [(LAStoryPageViewController *)segue.destinationViewController setStory:self.story];
     }
+}
+
+- (void)configureView
+{
+    self.storyNameLabel.text = self.story.title;
+    self.submitterNameLabel.text = [NSString stringWithFormat:@"by %@", self.story.submitter.username];
+    
+    if ([self.story hoursSinceCreation] == 1) {
+        self.postTimeLabel.text = @"1 hour ago";
+    } else {
+        self.postTimeLabel.text = [NSString stringWithFormat:@"%d hours ago", [self.story hoursSinceCreation]];
+    }
+}
+
+- (void)reloadData
+{
+    [[LAHTTPClient sharedClinet] getStoryWithShortID:self.story.shortID success:^(AFJSONRequestOperation *operation, id responseObject) {
+        NSDictionary *storyDict = (NSDictionary *)responseObject;
+        [self.story unpackDictionary:storyDict];
+        for (Comment *comment in self.story.comments) {
+            NSLog(@"??? %@", comment);
+        }
+    } failure:^(AFJSONRequestOperation *operation, NSError *error) {
+        NSLog(@"Error getting story %@: %@", self.story.shortID, error.localizedDescription);
+    }];
 }
 
 #pragma mark - Scroll view delegate

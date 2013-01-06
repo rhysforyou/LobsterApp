@@ -18,4 +18,6 @@ typedef void (^LAHTTPClientFailure)(AFJSONRequestOperation *operation, NSError *
 - (void)getHottestStoriesWithSuccess:(LAHTTPClientSuccess)success failure:(LAHTTPClientFailure)failure;
 - (void)getNewestStoriesWithSuccess:(LAHTTPClientSuccess)success failure:(LAHTTPClientFailure)failure;
 
+- (void)getStoryWithShortID:(NSString *)shortID success:(LAHTTPClientSuccess)success failure:(LAHTTPClientFailure)failure;
+
 @end

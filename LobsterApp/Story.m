@@ -60,7 +60,7 @@
     self.submitter = [User objectWithDictionary:dictionary[@"submitter_user"] context:self.managedObjectContext];
     
     for (NSDictionary *commentDict in dictionary[@"comments"]) {
-        Comment *comment = [Comment objectWithDictionary:dictionary[@"comment"] context:self.managedObjectContext];
+        Comment *comment = [Comment objectWithDictionary:commentDict context:self.managedObjectContext];
         [self addCommentsObject:comment];
     }
 }
@@ -71,6 +71,17 @@
     NSInteger hoursSinceCreation = timeSinceCreation / (60 * 60);
     
     return hoursSinceCreation;
+}
+
+#pragma mark - Accessors I shouldn't have to override
+
+- (void)addCommentsObject:(Comment *)value
+{
+    [self willChangeValueForKey:@"comments"];
+    NSMutableOrderedSet *comments = [NSMutableOrderedSet orderedSetWithOrderedSet:self.comments];
+    [comments addObject:value];
+    self.comments = [NSOrderedSet orderedSetWithOrderedSet:comments];
+    [self didChangeValueForKey:@"comments"];
 }
 
 @end

@@ -61,4 +61,19 @@
     }];
 }
 
+- (void)getStoryWithShortID:(NSString *)shortID success:(LAHTTPClientSuccess)success failure:(LAHTTPClientFailure)failure;
+{
+    NSString *path = [NSString stringWithFormat:@"/s/%@", shortID];
+    
+    [self getPath:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success((AFJSONRequestOperation *)operation, responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure((AFJSONRequestOperation *)operation, error);
+        }
+    }];
+}
+
 @end
