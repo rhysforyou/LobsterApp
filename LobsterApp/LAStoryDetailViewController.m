@@ -9,6 +9,7 @@
 #import "LAStoryDetailViewController.h"
 #import "LASlideUnderHeaderView.h"
 #import "LAStoryPageViewController.h"
+#import "LACommentCell.h"
 #import "LAHTTPClient.h"
 #import "Story.h"
 #import "User.h"
@@ -66,9 +67,8 @@
     [[LAHTTPClient sharedClinet] getStoryWithShortID:self.story.shortID success:^(AFJSONRequestOperation *operation, id responseObject) {
         NSDictionary *storyDict = (NSDictionary *)responseObject;
         [self.story unpackDictionary:storyDict];
-        for (Comment *comment in self.story.comments) {
-            NSLog(@"??? %@", comment);
-        }
+        [self configureView];
+        [self.tableView reloadData];
     } failure:^(AFJSONRequestOperation *operation, NSError *error) {
         NSLog(@"Error getting story %@: %@", self.story.shortID, error.localizedDescription);
     }];
@@ -92,17 +92,22 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 20;
+    return [self.story.comments count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"commentCell";
+    LACommentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    [cell configureWithComment:self.story.comments[indexPath.row]];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [LACommentCell heightWithComment:self.story.comments[indexPath.row]];
 }
 
 /*

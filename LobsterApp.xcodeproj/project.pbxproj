@@ -44,6 +44,7 @@
 		579882541698EE2800214F97 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 579882531698EE2800214F97 /* Comment.m */; };
 		579882571698EE3B00214F97 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 579882561698EE3B00214F97 /* User.m */; };
 		5798825A1698EEE900214F97 /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 579882591698EEE900214F97 /* Story.m */; };
+		5798B274169907AA00F46DC2 /* LACommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5798B273169907AA00F46DC2 /* LACommentCell.m */; };
 		579A483816857BBA0025396F /* LANewsetStoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A483716857BBA0025396F /* LANewsetStoriesViewController.m */; };
 		579A4841168582C00025396F /* NSDate+LAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A4840168582C00025396F /* NSDate+LAAdditions.m */; };
 		579A484A16858AD10025396F /* LAStoryPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A484916858AD10025396F /* LAStoryPageViewController.m */; };
@@ -123,6 +124,8 @@
 		579882561698EE3B00214F97 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		579882581698EEE900214F97 /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
 		579882591698EEE900214F97 /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
+		5798B272169907AA00F46DC2 /* LACommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LACommentCell.h; sourceTree = "<group>"; };
+		5798B273169907AA00F46DC2 /* LACommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LACommentCell.m; sourceTree = "<group>"; };
 		579A483616857BBA0025396F /* LANewsetStoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LANewsetStoriesViewController.h; sourceTree = "<group>"; };
 		579A483716857BBA0025396F /* LANewsetStoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LANewsetStoriesViewController.m; sourceTree = "<group>"; };
 		579A483F168582C00025396F /* NSDate+LAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LAAdditions.h"; sourceTree = "<group>"; };
@@ -409,6 +412,8 @@
 			isa = PBXGroup;
 			children = (
 				57ED631B16807EDE0039C47E /* MainStoryboard.storyboard */,
+				5798B272169907AA00F46DC2 /* LACommentCell.h */,
+				5798B273169907AA00F46DC2 /* LACommentCell.m */,
 				57A6DDAD1696968E00100434 /* LAStoryCell.h */,
 				57A6DDAE1696968E00100434 /* LAStoryCell.m */,
 				579882441697DEF300214F97 /* LASlideUnderHeaderView.h */,
@@ -552,6 +557,7 @@
 				579882541698EE2800214F97 /* Comment.m in Sources */,
 				579882571698EE3B00214F97 /* User.m in Sources */,
 				5798825A1698EEE900214F97 /* Story.m in Sources */,
+				5798B274169907AA00F46DC2 /* LACommentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,4 +23,6 @@
 @property (nonatomic, retain) Story *story;
 @property (nonatomic, retain) User *commentor;
 
+@property (readonly) NSInteger hoursSinceCreation;
+
 @end
