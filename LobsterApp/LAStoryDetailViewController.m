@@ -20,13 +20,12 @@
 
 @implementation LAStoryDetailViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (void)viewDidLoad
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [super viewDidLoad];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -64,13 +63,16 @@
 
 - (void)reloadData
 {
+    [self.refreshControl beginRefreshing];
     [[LAHTTPClient sharedClinet] getStoryWithShortID:self.story.shortID success:^(AFJSONRequestOperation *operation, id responseObject) {
         NSDictionary *storyDict = (NSDictionary *)responseObject;
         [self.story unpackDictionary:storyDict];
         [self configureView];
         [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
     } failure:^(AFJSONRequestOperation *operation, NSError *error) {
         NSLog(@"Error getting story %@: %@", self.story.shortID, error.localizedDescription);
+        [self.refreshControl endRefreshing];
     }];
 }
 
