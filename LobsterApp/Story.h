@@ -31,6 +31,7 @@
 
 @interface Story (CoreDataGeneratedAccessors)
 
+// WARNING: There's a huge bug in Core Data that means these are mostly broken, use at your own peril
 - (void)insertObject:(Comment *)value inCommentsAtIndex:(NSUInteger)idx;
 - (void)removeObjectFromCommentsAtIndex:(NSUInteger)idx;
 - (void)insertComments:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
