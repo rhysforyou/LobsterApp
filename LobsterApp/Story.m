@@ -59,16 +59,18 @@
     
     self.submitter = [User objectWithDictionary:dictionary[@"submitter_user"] context:self.managedObjectContext];
     
-    NSMutableOrderedSet *newComments = [[NSMutableOrderedSet alloc] init];
-    
-    for (NSDictionary *commentDict in dictionary[@"comments"]) {
-        Comment *comment = [Comment objectWithDictionary:commentDict context:self.managedObjectContext];
-        [newComments addObject:comment];
+    if (dictionary[@"comments"]) {
+        NSMutableOrderedSet *newComments = [[NSMutableOrderedSet alloc] init];
+        
+        for (NSDictionary *commentDict in dictionary[@"comments"]) {
+            Comment *comment = [Comment objectWithDictionary:commentDict context:self.managedObjectContext];
+            [newComments addObject:comment];
+        }
+        
+        [self willChangeValueForKey:@"comments"];
+        self.comments = newComments;
+        [self didChangeValueForKey:@"comments"];
     }
-    
-    [self willChangeValueForKey:@"comments"];
-    self.comments = newComments;
-    [self didChangeValueForKey:@"comments"];
 }
 
 - (NSInteger)hoursSinceCreation
