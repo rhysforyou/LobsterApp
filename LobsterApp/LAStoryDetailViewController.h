@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @class Story;
+@protocol DTAttributedTextContentViewDelegate;
 
-@interface LAStoryDetailViewController : UITableViewController
+@interface LAStoryDetailViewController : UITableViewController <DTAttributedTextContentViewDelegate>
 
 @property (nonatomic, strong) Story *story;
 

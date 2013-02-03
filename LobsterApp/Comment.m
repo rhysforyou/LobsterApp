@@ -76,7 +76,9 @@
 - (NSAttributedString *)formattedContent
 {
 	NSData *htmlData = [self.content dataUsingEncoding:NSUTF8StringEncoding];
+	NSDictionary *options = @{DTDefaultFontFamily : @"Helvetica Neue"};
 	NSAttributedString *formattedContent = [[NSAttributedString alloc] initWithHTMLData:htmlData
+																				options:options
 																	 documentAttributes:nil];
 	
 	return formattedContent;

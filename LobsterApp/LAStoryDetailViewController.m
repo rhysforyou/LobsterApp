@@ -13,6 +13,7 @@
 #import "LAHTTPClient.h"
 #import "Story.h"
 #import "User.h"
+#import "DTCoreText.h"
 
 @interface LAStoryDetailViewController ()
 
@@ -112,56 +113,25 @@
     return [LACommentCell heightWithComment:self.story.comments[indexPath.row]];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - Attributed Text Content View Delegate
+
+- (UIView *)attributedTextContentView:(DTAttributedTextContentView *)attributedTextContentView viewForLink:(NSURL *)url identifier:(NSString *)identifier frame:(CGRect)frame
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+	DTLinkButton *linkButton = [[DTLinkButton alloc] init];
+	linkButton.URL = url;
+	linkButton.GUID = identifier;
+	linkButton.frame = frame;
+	linkButton.minimumHitSize = CGSizeMake(25.0f, 25.0f);
+	linkButton.showsTouchWhenHighlighted = YES;
+	
+	[linkButton addTarget:self action:@selector(linkTapped:) forControlEvents:UIControlEventTouchUpInside];
+	
+	return linkButton;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)linkTapped:(DTLinkButton *)linkButton
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+	[[UIApplication sharedApplication] openURL:linkButton.URL];
 }
 
 @end
