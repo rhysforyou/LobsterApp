@@ -1,3 +1,6 @@
 [submodule "Vendor/AFNetworking"]
 	path = Vendor/AFNetworking
 	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "Vendor/DTCoreText"]
+	path = Vendor/DTCoreText
+	url = git://github.com/Cocoanetics/DTCoreText.git
