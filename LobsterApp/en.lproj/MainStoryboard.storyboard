@@ -250,29 +250,25 @@
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8c-gd-w8d">
-                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                        </textView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4c-SF-EmP" customClass="DTAttributedTextContentView">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
                                     <constraint firstItem="rIg-JQ-43R" firstAttribute="baseline" secondItem="Xqn-Rr-74u" secondAttribute="baseline" type="default" id="4QD-Wg-y2a"/>
                                     <constraint firstItem="Xqn-Rr-74u" firstAttribute="top" secondItem="w87-83-f3T" secondAttribute="top" constant="7" type="user" id="8ts-sM-po1"/>
-                                    <constraint firstAttribute="bottom" secondItem="Y8c-gd-w8d" secondAttribute="bottom" type="user" id="L7h-AL-hZf"/>
-                                    <constraint firstItem="Y8c-gd-w8d" firstAttribute="top" secondItem="Xqn-Rr-74u" secondAttribute="bottom" constant="-5" type="user" id="cuq-r7-8XC"/>
-                                    <constraint firstItem="Y8c-gd-w8d" firstAttribute="leading" secondItem="w87-83-f3T" secondAttribute="leading" type="user" id="hGf-U0-gY1"/>
+                                    <constraint firstItem="M4c-SF-EmP" firstAttribute="top" secondItem="Xqn-Rr-74u" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ahv-Ge-Bfb"/>
+                                    <constraint firstItem="M4c-SF-EmP" firstAttribute="trailing" secondItem="w87-83-f3T" secondAttribute="trailing" type="default" id="VWp-sB-S0c"/>
+                                    <constraint firstItem="M4c-SF-EmP" firstAttribute="leading" secondItem="w87-83-f3T" secondAttribute="leading" type="user" id="evr-DS-RNo"/>
+                                    <constraint firstAttribute="bottom" secondItem="M4c-SF-EmP" secondAttribute="bottom" constant="1" id="hhc-qN-ljd"/>
                                     <constraint firstItem="rIg-JQ-43R" firstAttribute="leading" secondItem="Xqn-Rr-74u" secondAttribute="trailing" constant="5" type="user" id="hre-Lm-1LE"/>
                                     <constraint firstItem="Xqn-Rr-74u" firstAttribute="leading" secondItem="w87-83-f3T" secondAttribute="leading" constant="10" type="user" id="mKN-nu-JrV"/>
-                                    <constraint firstItem="Y8c-gd-w8d" firstAttribute="trailing" secondItem="w87-83-f3T" secondAttribute="trailing" type="default" id="xpI-Ig-for"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="commentTextIndentConstraint" destination="hGf-U0-gY1" id="yDi-sw-JyQ"/>
-                                    <outlet property="commentTextView" destination="Y8c-gd-w8d" id="KCg-Xr-RBp"/>
+                                    <outlet property="commentTextIndentConstraint" destination="evr-DS-RNo" id="oKM-3K-JdL"/>
+                                    <outlet property="commentTextView" destination="M4c-SF-EmP" id="Dd9-94-lgV"/>
                                     <outlet property="timeLabel" destination="rIg-JQ-43R" id="VSu-wk-zvC"/>
                                     <outlet property="titleTextIndentConstraint" destination="mKN-nu-JrV" id="TSN-ei-S7D"/>
                                     <outlet property="usernameLabel" destination="Xqn-Rr-74u" id="ARZ-UB-Kos"/>
@@ -370,55 +366,6 @@
             <point key="canvasLocation" x="603" y="964"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="LACommentCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LACommentCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="commentTextIndentConstraint" candidateClass="NSLayoutConstraint"/>
-                <relationship kind="outlet" name="commentTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleTextIndentConstraint" candidateClass="NSLayoutConstraint"/>
-                <relationship kind="outlet" name="usernameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LAHottestStoriesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAHottestStoriesViewController.h"/>
-        </class>
-        <class className="LANewsetStoriesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LANewsetStoriesViewController.h"/>
-        </class>
-        <class className="LASlideUnderHeaderView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LASlideUnderHeaderView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="LAStoryCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAStoryCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="authorNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="commentCountLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="storyTitleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LAStoryDetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAStoryDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="postTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="storyNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="submitterNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LAStoryPageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LAStoryPageViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

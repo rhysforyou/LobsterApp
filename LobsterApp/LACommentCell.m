@@ -9,6 +9,7 @@
 #import "LACommentCell.h"
 #import "Comment.h"
 #import "User.h"
+#import "DTCoreText.h"
 
 @implementation LACommentCell
 
@@ -27,15 +28,6 @@
     return commentTextSize.height + 40.0;
 }
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        self.commentTextView.contentInset = UIEdgeInsetsMake(10.0, 13.0, 10.0, 13.0);
-    }
-    return self;
-}
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
@@ -48,7 +40,7 @@
     self.commentTextIndentConstraint.constant = 20.0f * ([comment.indentLevel integerValue] - 1);
     self.titleTextIndentConstraint.constant = 20.0f * ([comment.indentLevel integerValue] - 1) + 10.0f;
     
-    self.commentTextView.text = comment.content;
+    self.commentTextView.attributedString = comment.formattedContent;
     self.usernameLabel = [NSString stringWithFormat:@"by %@", comment.commentor.username];
     
     if (comment.hoursSinceCreation == 1) {

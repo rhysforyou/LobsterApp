@@ -24,5 +24,6 @@
 @property (nonatomic, retain) User *commentor;
 
 @property (readonly) NSInteger hoursSinceCreation;
+@property (readonly) NSAttributedString *formattedContent;
 
 @end

@@ -10,6 +10,7 @@
 #import "Story.h"
 #import "User.h"
 
+#import "DTCoreText.h"
 #import "NSDate+LAAdditions.h"
 
 @implementation Comment
@@ -70,6 +71,15 @@
     NSInteger hoursSinceCreation = timeSinceCreation / (60 * 60);
     
     return hoursSinceCreation;
+}
+
+- (NSAttributedString *)formattedContent
+{
+	NSData *htmlData = [self.content dataUsingEncoding:NSUTF8StringEncoding];
+	NSAttributedString *formattedContent = [[NSAttributedString alloc] initWithHTMLData:htmlData
+																	 documentAttributes:nil];
+	
+	return formattedContent;
 }
 
 @end

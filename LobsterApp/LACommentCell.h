@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class Comment;
+@class Comment, DTAttributedTextContentView;
 
 @interface LACommentCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
-@property (strong, nonatomic) IBOutlet UITextView *commentTextView;
+@property (strong, nonatomic) IBOutlet DTAttributedTextContentView *commentTextView;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *commentTextIndentConstraint;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *titleTextIndentConstraint;
 
